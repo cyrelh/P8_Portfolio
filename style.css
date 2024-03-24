@@ -30,7 +30,7 @@ html{
 
 body {
     font-family: 'Questrial', sans-serif;
-    background-color: #d3d3d3; /* Gris moyen à foncé */
+    background-color: #f0ead6; /* Gris moyen à foncé */
     margin: 0; /* Pour supprimer les marges par défaut */
     padding: 0; /* Pour supprimer les espaces de remplissage par défaut */
     color: #2e292b;
@@ -109,7 +109,7 @@ body {
   aspect-ratio: 1/1;
   border-radius: 100%;
   justify-self: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.45) 1.95px 1.95px 2.6px;
 }
 .intro_avatar img {
   width: 100%;
@@ -170,14 +170,14 @@ body {
 .about_picture {
   margin-inline: auto;
   display: block;
-  background-color: #878E99;
-  width: 100%;
-  max-width: 11rem;
+  width: auto;
+  max-width: 13rem;
   aspect-ratio: 1/1;
-  border-radius: 100%;
-  object-fit: cover;
+  border-radius: 30%;
+  object-fit: fill;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+
 .about_intro_title {
   font-size: 3rem;
 }
@@ -208,4 +208,80 @@ body {
 
 .about_cv:hover {
   background-color: #c79b77;
+}
+
+.about .about_skills:before {
+  display: inline-block;
+  content: "";
+  width: 17rem;
+  height: 0.5rem;
+  background-color: rgb(199, 155, 119);
+  border-radius: 0.62rem;
+  margin-top: 3rem;
+}
+.about .skills_title {
+  margin-block: 3rem;
+  font-size: 2rem;
+
+}
+
+.about_skills_content p{
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  max-width: 60rem;
+  font-size: 1.4rem; /* Taille de la police */
+  line-height: 2rem; /* Hauteur de ligne */
+  color: #2e292b; /* Couleur du texte */
+}
+
+.about .skills_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+  gap: 2rem;
+  margin-top: 3%;
+}
+
+.about .skills_list .icon-spaced {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+
+.icon-spaced {
+  display: inline-block;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  }
+
+  .icon-spaced:hover {
+  transform: scale(1.1);
+  }
+
+/* Footer */
+footer {
+  background-color: #6D7B8D;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer_wrapper {
+  margin-bottom: 20px;
+}
+
+.logo_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.logo_wrapper img {
+  width: 8%;
+  border-radius: 30%;
 }
