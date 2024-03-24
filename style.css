@@ -263,6 +263,52 @@ body {
   transform: scale(1.1);
   }
 
+  /* Contact */
+
+ .home_contact {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact_title {
+  font-family: 'Questrial', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-email {
+  display: inline-block;
+  background-color: #878E99;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.btn-email:hover {
+  background-color: #c79b77;
+}
+
+.social-network {
+  margin-top: 1rem;
+}
+
+.social-network .link-icon {
+  color: #000;
+  font-size: 5.5rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-network .link-icon:hover {
+  color: #c79b77;
+}
+
 /* Footer */
 footer {
   background-color: #6D7B8D;
