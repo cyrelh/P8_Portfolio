@@ -87,3 +87,67 @@ body {
   transform-origin: right;
   transform: scaleX(1);
 }
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #6D7B8D;
+  border-radius: 1.5rem;
+  padding: 2rem 5rem;
+  gap: 2rem;
+}
+.intro_avatar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  background-color: #878E99;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  justify-self: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.intro_avatar img {
+  width: 100%;
+  padding-top: 0%;
+  margin-top: auto;
+}
+.intro_content {
+  text-align: justify;
+}
+.intro_title {
+  font-size: 3rem;
+  color: #2e292b; /* Couleur du texte */
+  text-align: center;
+
+}
+.intro_bis {
+  margin-top: 1.5rem;
+  max-width: 60rem;
+  font-size: 1.6rem; /* Taille de la police */
+  line-height: 2.5rem; /* Hauteur de ligne */
+  color: #2e292b; /* Couleur du texte */
+}
+
+.intro_bis strong {
+  font-weight: bold;
+}
+
+.intro-btn {
+  display: inline-block;
+  background-color: #878E99;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: #fff; /* Couleur du texte */
+  text-decoration: none;
+  font-size: 1.6rem; /* Taille de la police */
+  transition: background-color 0.3s ease; /* Animation de transition */
+}
+.intro-btn:hover {
+  background-color: #c79b77; /* Changement de couleur au survol */
+}
