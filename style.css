@@ -128,8 +128,8 @@ body {
 .intro_bis {
   margin-top: 1.5rem;
   max-width: 60rem;
-  font-size: 1.6rem; /* Taille de la police */
-  line-height: 2.5rem; /* Hauteur de ligne */
+  font-size: 1.4rem; /* Taille de la police */
+  line-height: 2rem; /* Hauteur de ligne */
   color: #2e292b; /* Couleur du texte */
 }
 
@@ -137,7 +137,7 @@ body {
   font-weight: bold;
 }
 
-.intro-btn {
+.intro_btn {
   display: inline-block;
   background-color: #878E99;
   padding: 1rem 1.5rem;
@@ -148,6 +148,64 @@ body {
   font-size: 1.6rem; /* Taille de la police */
   transition: background-color 0.3s ease; /* Animation de transition */
 }
-.intro-btn:hover {
+.intro_btn:hover {
   background-color: #c79b77; /* Changement de couleur au survol */
+}
+
+.home_about{
+  margin-top: 5%;
+
+}
+
+.about {
+  text-align: center;
+  max-width: 50rem;
+  margin-inline: auto;
+}
+.about_intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.about_picture {
+  margin-inline: auto;
+  display: block;
+  background-color: #878E99;
+  width: 100%;
+  max-width: 11rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.about_intro_title {
+  font-size: 3rem;
+}
+
+.about_intro_title_bis {
+  font-size: 2rem;
+}
+.about_intro_content p {
+  padding: 0.5rem;
+    margin-top: 1.5rem;
+    max-width: 60rem;
+    font-size: 1.4rem; /* Taille de la police */
+    line-height: 2rem; /* Hauteur de ligne */
+    color: #2e292b; /* Couleur du texte */
+}
+.about_cv {
+  display: inline-block;
+  margin: 2rem auto;
+  background-color: #878E99;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: background-color 0.3s ease;
+}
+
+.about_cv:hover {
+  background-color: #c79b77;
 }
