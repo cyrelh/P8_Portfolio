@@ -54,7 +54,7 @@ body {
   flex-shrink: 1; /*logo autorisé à se contracter*/
 }
 .header_wrapper .header_logo img {
-  width: clamp(100px, 100%,150px);
+  width: clamp(100px, 100%,250px);
 }
 
 .header_wrapper .nav_menu {
@@ -104,16 +104,16 @@ body {
   align-items: flex-end;
   overflow: hidden;
   background-color: #878E99;
-  width: 100%;
+  width: 13%;
   max-width: 300px;
   aspect-ratio: 1/1;
-  border-radius: 100%;
+  border-radius: 20%;
   justify-self: center;
   box-shadow: rgba(0, 0, 0, 0.45) 1.95px 1.95px 2.6px;
 }
 .intro_avatar img {
   width: 100%;
-  padding-top: 0%;
+  height: 250px;
   margin-top: auto;
 }
 .intro_content {
@@ -209,6 +209,78 @@ body {
 .about_cv:hover {
   background-color: #c79b77;
 }
+
+/*PROJETS*/
+
+.section-projects{
+  margin-top: 10%;
+}
+
+.projects_grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-gap: 2em;
+}
+
+.project {
+  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+  border-radius: 10px;
+}
+
+.project:hover {
+  transform: translateY(-7px);
+}
+
+.project_description {
+  margin-top: 1em;
+}
+
+img {
+  width: 100%;
+  height: 220px;
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: left top;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 3px 4px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.project_stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.2em 0;
+}
+
+.project_stack-item {
+  margin: 0.5em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--clr-fg-alt);
+}
+
+.project .link--icon {
+  margin-left: 0.5em;
+}
+
+.section_title {
+  font-family: 'Questrial', sans-serif; /* Utilisation de la même police que celle utilisée pour le titre "À propos" */
+  font-size: 3rem; /* Taille de la police */
+  margin-top: 10%; /* Marge supérieure pour espacer le titre de la section */
+  margin-bottom: 3rem; /* Marge inférieure pour espacer le titre de la section */
+  text-align: center; /* Alignement centré */
+}
+
+
+/*SKILLS*/
+
 
 .about .about_skills:before {
   display: inline-block;
@@ -328,6 +400,6 @@ footer {
 }
 
 .logo_wrapper img {
-  width: 8%;
+  width:11%;
   border-radius: 30%;
 }
