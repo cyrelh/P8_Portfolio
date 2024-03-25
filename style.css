@@ -403,3 +403,144 @@ footer {
   width:11%;
   border-radius: 30%;
 }
+
+
+/* RESPONSIVE */
+
+/* Pour les tablettes */
+@media screen and (max-width: 1024px) {
+  .header_wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header_wrapper .nav_menu {
+    margin: 2rem 0;
+    text-align: center;
+  }
+}
+
+/* Pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+  .header_wrapper {
+    margin: 1rem 2rem;
+  }
+  .header_wrapper .nav_menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  .header_wrapper .nav_menu .nav_link {
+    font-size: 1.5rem;
+  }
+  .intro {
+    padding: 2rem;
+  }
+  .intro_avatar {
+    width: 50%;
+  }
+  .about_intro_title {
+    font-size: 2.5rem;
+  }
+  .about_intro_title_bis {
+    font-size: 1.5rem;
+  }
+  .about_intro_content p {
+    font-size: 1.2rem;
+  }
+  .about_cv {
+    font-size: 1.4rem;
+  }
+  .section_title {
+    font-size: 2.5rem;
+  }
+  .project {
+    padding: 1.5em;
+  }
+  .project_description {
+    font-size: 1.2rem;
+  }
+  .project_stack-item {
+    font-size: 0.9rem;
+  }
+  .about .skills_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about .skills_list .icon-spaced {
+    font-size: 1.2rem;
+  }
+  .contact_title {
+    font-size: 1.8rem;
+  }
+  .btn-email {
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+  }
+  .social-network .link-icon {
+    font-size: 4rem;
+  }
+  footer {
+    padding: 10px;
+  }
+  .logo_wrapper img {
+    width: 25%;
+  }
+}
+
+/* Pour les petits appareils mobiles */
+@media screen and (max-width: 480px) {
+  .header_wrapper .nav_menu {
+    gap: 0.5rem;
+  }
+  .header_wrapper .nav_menu .nav_link {
+    font-size: 1.2rem;
+  }
+  .intro_avatar {
+    width: 70%;
+  }
+  .about_intro_title {
+    font-size: 2rem;
+  }
+  .about_intro_title_bis {
+    font-size: 1.3rem;
+  }
+  .about_intro_content p {
+    font-size: 1rem;
+  }
+  .about_cv {
+    font-size: 1.2rem;
+  }
+  .section_title {
+    font-size: 2rem;
+  }
+  .project_description {
+    font-size: 1rem;
+  }
+  .project_stack-item {
+    font-size: 0.8rem;
+  }
+  .about .skills_list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about .skills_list .icon-spaced {
+    font-size: 1rem;
+  }
+  .contact_title {
+    font-size: 1.5rem;
+  }
+  .btn-email {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+  .social-network .link-icon {
+    font-size: 3rem;
+  }
+  footer {
+    padding: 5px;
+  }
+  .logo_wrapper img {
+    width: 40%;
+  }
+}
