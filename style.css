@@ -30,7 +30,7 @@ html{
 
 body {
     font-family: 'Questrial', sans-serif;
-    background-color: #f0ead6; /* Gris moyen à foncé */
+    background-color: #bbbdd3; /* Gris moyen à foncé */
     margin: 0; /* Pour supprimer les marges par défaut */
     padding: 0; /* Pour supprimer les espaces de remplissage par défaut */
     color: #2e292b;
@@ -88,12 +88,23 @@ body {
   transform: scaleX(1);
 }
 
+.div_intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #6d878d;
+  border-radius: 1.5rem;
+  padding: 2rem 5rem;
+  gap: 2rem;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #6D7B8D;
+  background-color: #6d878d;
   border-radius: 1.5rem;
   padding: 2rem 5rem;
   gap: 2rem;
@@ -384,7 +395,7 @@ img {
 
 /* Footer */
 footer {
-  background-color: #6D7B8D;
+  background-color: #000;
   color: #fff;
   padding: 20px;
   text-align: center;
