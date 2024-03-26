@@ -17,7 +17,7 @@
 	<meta name="robots" content="index, follow" /> <!-- Métadonnées pour les robots d'indexation -->
 	<link rel="canonical" href="http://cyril-elhakim.fr/" />
 </head>
-<body>
+<body class="light" id="top">
     <header>
               <!-- HEADER -->
               <div class='header_wrapper'>
@@ -32,16 +32,18 @@
                       <li><a href='about.html' class='nav_link'>À propos</a></li>
                       <li><a href='project.html' class='nav_link'>Mes projets</a></li>
                       <li><a href='contact.html' class='nav_link'>Contact</a></li>
+                      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+                        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+                      </button>
                     </ul>
-                    <button type="button" aria-label="toggle theme" class="btn btn--icon toggle-theme">
-                      <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-                    </button>
+
+                    
                    
                 </nav>
-                <div id="toggle-contrast-btn">
-                  <i id="sun-icon" class="fas fa-sun"></i> <!-- Icône du soleil -->
-                  <i id="moon-icon" class="fas fa-moon"></i> <!-- Icône de la lune -->
-                </div>
+                <!-- <div id="toggle-contrast-btn">
+                  <i id="sun-icon" class="fas fa-sun"></i>
+                  <i id="moon-icon" class="fas fa-moon"></i> 
+                </div> -->
              </div>
     </header>
     <main>
@@ -54,8 +56,8 @@
                               <img src="/images/cyril-img.webp" alt="Avatar de présentatopn de Cyril EL-HAKIM"/>
                           </div>
                           <div class="intro_content">
-                              <h1 class='intro_title'>Cyril EL-HAKIM <br> <small>Développeur web </small>  </br> </h1>
-                              <p class='intro_bis'>
+                              <h1 class='intro_title' class="light" id="top">Cyril EL-HAKIM <br> <small>Développeur web </small>  </br> </h1>
+                              <p class='intro_bis' class="light" id="top">
                                 Ingénieur <strong>dynamique</strong> de formation, je m'appelle Cyril et je possède une expérience diversifiée dans plusieurs secteurs d'activité. Mon parcours professionnel comprend notamment le <strong>pilotage de l'industrialisation</strong>, la <strong>gestion de projets</strong> dans divers domaines, la <strong>recherche et développement</strong> axée sur la résolution de problèmes <strong>thermiques</strong>, ainsi que le <strong>contrôle qualité</strong> de produits chirurgicaux.
                                 <br><br>
                                 Ma capacité à établir une relation de confiance mutuelle avec mes collègues atteste de ma <strong>détermination</strong> et de mon efficacité dans mes missions. Mes compétences reposent sur un sens aiguisé de l'<strong>organisation</strong>, une grande <strong>adaptabilité</strong> au travail en équipe, une <strong>ouverture d'esprit</strong>, une <strong>autonomie</strong>, une <strong>détermination affirmée</strong> et surtout une capacité à réagir efficacement avec mes interlocuteurs.
@@ -72,24 +74,9 @@
                         </section>
               </div>
           </section>
-          <!-- Contact -->
-<section id="contact" class="home_contact">
-  <h2 class="contact_title"><li><a href='contact.html' class='nav_link'>Contact</a></li>
-  </h2>
-  <a href="mailto:elhakim.cyril@outlook.com">
-    <span class="btn-email">Contactez-moi par email</span>
-  </a>
-  <div class="social-network">
-    <a href="https://github.com/cyrelh" aria-label="github" class="link-icon">
-      <i aria-hidden="true" class="fab fa-github"></i>
-    </a>
-  </div>
-</section>
-
-
       </div>
     </main>
-    <script src="./script.js"></script>
+    <script src="index.js"></script>
   </body>
 <footer>
   <div class="footer_wrapper">
