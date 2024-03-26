@@ -37,6 +37,25 @@ body {
     scroll-behavior: smooth;
 }
 
+.light {
+  --clr-bg: #fcfcfc;
+  --clr-bg-alt: #fff;
+  --clr-fg: #555;
+  --clr-fg-alt: #444;
+  --clr-primary: #2978b5;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dark {
+  --clr-bg: #23283e;
+  --clr-bg-alt: #2a2f4c;
+  --clr-fg: #bdbddd;
+  --clr-fg-alt: #cdcdff;
+  --clr-primary: #90a0d9;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
 .rounded_logo {
   border-radius: 30%;
 }
@@ -64,6 +83,7 @@ body {
 }
 .header_wrapper .nav_menu .nav_link {
   font-size: 2rem;
+  font-weight: bold;
   white-space: nowrap;
   padding-bottom: 0.5rem;
   position: relative;
@@ -229,15 +249,16 @@ body {
 }
 
 .projects_grid {
-  max-width: 1100px;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-  grid-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
 }
 
 .project {
-  padding: 2em;
+  padding: 2rem;
   margin: 0 auto;
   text-align: center;
   box-shadow: var(--shadow);
@@ -245,12 +266,18 @@ body {
   border-radius: 10px;
 }
 
-.project:hover {
-  transform: translateY(-7px);
+.project:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+
 }
 
+/* .project:hover {
+  transform: translateY(-7px);
+} */
+
 .project_description {
-  margin-top: 1em;
+  margin: 1% 1% 1% 1%;
 }
 
 img {
@@ -269,6 +296,7 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   margin: 1.2em 0;
+  
 }
 
 .project_stack-item {
@@ -276,6 +304,7 @@ img {
   font-weight: 500;
   font-size: 0.8rem;
   color: var(--clr-fg-alt);
+  font-weight: bold;
 }
 
 .project .link--icon {
@@ -344,7 +373,8 @@ img {
   }
 
   .icon-spaced:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+  cursor: pointer;
   }
 
   /* Contact */
@@ -420,7 +450,32 @@ footer {
 /* RESPONSIVE */
 
 /* Pour les tablettes */
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
+
+  .projects_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .header_wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header_wrapper .nav_menu {
+    margin: 2rem 0;
+    text-align: center;
+  }
+} */
+
+/* Pour les tablettes */
+@media screen and (max-width: 1800px) {
+
+  .projects_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
   .header_wrapper {
     flex-direction: column;
     align-items: center;
@@ -434,6 +489,12 @@ footer {
 
 /* Pour les appareils mobiles */
 @media screen and (max-width: 768px) {
+
+  .projects_grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
   .header_wrapper {
     margin: 1rem 2rem;
   }
@@ -549,4 +610,34 @@ footer {
   footer {
     padding: 5px;
   }
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%; /* Centre verticalement */
+  left: 50%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); /* Centrage absolu */
+  width: 60%; /* Largeur de la modale */
+  max-width: 600px; /* Largeur maximale de la modale */
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond semi-transparente */
+  padding: 20px; /* Espacement interne */
+  border-radius: 10px; /* Coins arrondis */
+  z-index: 9999; /* Place la modale au-dessus de tout le contenu de la page */
+}
+
+.modal-image {
+  display: block;
+  width: 100%; /* Taille maximale pour l'image */
+  height: auto; /* Hauteur automatique */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px; /* Position haute */
+  right: 10px; /* Position droite */
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
 }
