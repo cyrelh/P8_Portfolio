@@ -121,7 +121,7 @@ cursor: pointer;
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;
-  border-radius: 5px;
+  border-radius: 100%;
   transition: transform 0.5s ease-in-out;
 }
 

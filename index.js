@@ -1,34 +1,46 @@
-const body = document.body
+// Sélection de l'élément body du document HTML
+const body = document.body;
 
-const btnTheme = document.querySelector('.fa-moon')
+// Sélection de l'icône du thème sombre
+const btnTheme = document.querySelector('.fa-moon');
+
+// Fonction pour ajouter les classes de thème
 const addThemeClass = (bodyClass, btnClass) => {
-  body.classList.add(bodyClass)
-  btnTheme.classList.add(btnClass)
-}
+  body.classList.add(bodyClass); // Ajout de la classe au body
+  btnTheme.classList.add(btnClass); // Ajout de la classe à l'icône de thème
+};
 
-const getBodyTheme = localStorage.getItem('portfolio-theme')
-const getBtnTheme = localStorage.getItem('portfolio-btn-theme')
+// Récupération du thème actuel depuis le stockage local
+const getBodyTheme = localStorage.getItem('portfolio-theme');
 
-addThemeClass(getBodyTheme, getBtnTheme)
+// Récupération de l'icône de thème actuelle depuis le stockage local
+const getBtnTheme = localStorage.getItem('portfolio-btn-theme');
 
-const isDark = () => body.classList.contains('dark')
+// Application des classes de thème au chargement de la page
+addThemeClass(getBodyTheme, getBtnTheme);
 
+// Fonction pour vérifier si le thème sombre est appliqué
+const isDark = () => body.classList.contains('dark');
+
+// Fonction pour définir le thème
 const setTheme = (bodyClass, btnClass) => {
+  // Suppression des anciennes classes de thème
+  body.classList.remove(localStorage.getItem('portfolio-theme'));
+  btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'));
+  // Ajout des nouvelles classes de thème
+  addThemeClass(bodyClass, btnClass);
+  // Enregistrement du thème dans le stockage local
+  localStorage.setItem('portfolio-theme', bodyClass);
+  localStorage.setItem('portfolio-btn-theme', btnClass);
+};
 
-	body.classList.remove(localStorage.getItem('portfolio-theme'))
-	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
-
-  addThemeClass(bodyClass, btnClass)
-
-	localStorage.setItem('portfolio-theme', bodyClass)
-	localStorage.setItem('portfolio-btn-theme', btnClass)
-}
-
-
+// Fonction pour basculer entre les thèmes clair et sombre
 const toggleTheme = () =>
-	isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
+  isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun');
 
-btnTheme.addEventListener('click', toggleTheme)
+// Ajout d'un écouteur d'événements de clic sur le bouton de thème
+btnTheme.addEventListener('click', toggleTheme);
+
 
 
 // // Récupérer tous les liens de navigation
