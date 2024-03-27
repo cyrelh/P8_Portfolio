@@ -43,6 +43,7 @@ btnTheme.addEventListener('click', toggleTheme);
 
 
 
+
 // // Récupérer tous les liens de navigation
 // const navLinks = document.querySelectorAll('.nav_link');
 
@@ -61,3 +62,129 @@ btnTheme.addEventListener('click', toggleTheme);
 // // Ajouter un gestionnaire d'événement de clic à chaque lien de navigation
 // navLinks.forEach(link => link.addEventListener('click', handleNavLinkClick));
 
+// Récupérer tous les éléments qui ouvrent les modales
+const modalTriggers = document.querySelectorAll(".open-modal");
+
+// Pour chaque élément, ajouter un gestionnaire d'événement au clic
+modalTriggers.forEach(function(trigger) {
+    trigger.addEventListener("click", function() {
+        // Récupérer l'ID de la modal spécifique
+        const modalId = trigger.getAttribute("data-modal-id");
+        // Récupérer la modal correspondante
+        const modal = document.getElementById(modalId);
+        // Afficher la modal
+        modal.style.display = "block";
+
+        // Récupérer l'élément de fermeture (la croix)
+        const closeModal = modal.querySelector(".close-modal");
+
+        // Quand l'utilisateur clique sur la croix, fermer la modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Quand l'utilisateur clique en dehors de la modal, fermer la modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+});
+// Sélectionnez la fenêtre modale et les boutons de contrôle
+const modal1 = document.getElementById("project-modal-1");
+const modalImage = modal1.querySelector(".modal-image");
+const prevBtn = modal1.querySelector(".modal-btn-prev");
+const nextBtn = modal1.querySelector(".modal-btn-next");
+
+// Tableau des chemins d'accès des images
+const images = [
+  "/images/Booki/Booki-1.png",
+  "/images/Booki/Booki-2.png",
+  "/images/Booki/Booki-3.png"
+];
+
+// Index de l'image actuellement affichée
+let currentIndex = 0;
+
+// Fonction pour afficher l'image suivante
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  modalImage.src = images[currentIndex];
+}
+
+// Fonction pour afficher l'image précédente
+function showPrevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  modalImage.src = images[currentIndex];
+}
+
+// Écouteurs d'événements pour les boutons "Next" et "Back"
+nextBtn.addEventListener("click", showNextImage);
+prevBtn.addEventListener("click", showPrevImage);
+
+
+// Sélectionnez la fenêtre modale 2 et les boutons de contrôle
+const modal2 = document.getElementById("project-modal-2");
+const modalImage2 = modal2.querySelector(".modal-image");
+const prevBtn2 = modal2.querySelector(".modal-btn-prev");
+const nextBtn2 = modal2.querySelector(".modal-btn-next");
+
+// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
+const imagesSophieBluel = [
+  "/images/Booki/Booki-m-1.png",
+  "/images/Booki/Booki-m-2.png",
+  "/images/Booki/Booki-m-3.png"
+];
+
+// Index de l'image actuellement affichée
+let currentIndexSophieBluel = 0;
+
+// Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
+function showNextImageSophieBluel() {
+  currentIndexSophieBluel = (currentIndexSophieBluel + 1) % imagesSophieBluel.length;
+  modalImage2.src = imagesSophieBluel[currentIndexSophieBluel];
+}
+
+// Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
+function showPrevImageSophieBluel() {
+  currentIndexSophieBluel = (currentIndexSophieBluel - 1 + imagesSophieBluel.length) % imagesSophieBluel.length;
+  modalImage2.src = imagesSophieBluel[currentIndexSophieBluel];
+}
+
+// Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
+nextBtn2.addEventListener("click", showNextImageSophieBluel);
+prevBtn2.addEventListener("click", showPrevImageSophieBluel);
+
+
+// Sélectionnez la fenêtre modale 3 et les boutons de contrôle
+const modal3 = document.getElementById("project-modal-3");
+const modalImage3 = modal3.querySelector(".modal-image");
+const prevBtn3 = modal3.querySelector(".modal-btn-prev");
+const nextBtn3 = modal3.querySelector(".modal-btn-next");
+
+// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
+const imagesNinaCarducci = [
+  "/images/Booki/Booki-m-1.png",
+  "/images/Booki/Booki-m-2.png",
+  "/images/Booki/Booki-m-3.png"
+];
+
+// Index de l'image actuellement affichée
+let currentIndexNinaCarducci = 0;
+
+// Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
+function showNextImageNinaCarducci() {
+	currentIndexNinaCarducci = (currentIndexNinaCarducci + 1) % imagesNinaCarducci.length;
+  modalImage3.src = imagesNinaCarducci[currentIndexNinaCarducci];
+}
+
+// Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
+function showNextImageNinaCarducci() {
+	currentIndexNinaCarducci = (currentIndexNinaCarducci - 1 + imagesNinaCarducci.length) % imagesNinaCarducci.length;
+  modalImage3.src = imagesNinaCarducci[currentIndexNinaCarducci];
+}
+
+// Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
+nextBtn3.addEventListener("click", showNextImageNinaCarducci);
+prevBtn3.addEventListener("click", showNextImageNinaCarducci);

@@ -18,7 +18,7 @@
         <meta name="robots" content="index, follow" /> <!-- Métadonnées pour les robots d'indexation -->
         <link rel="canonical" href="http://cyril-elhakim.fr/" />
     </head>
-<body class="light" id="top">
+<body>
     <header>
         <!-- HEADER -->
         <div class='header_wrapper'>
@@ -30,7 +30,7 @@
                 <ul class='nav_menu'>
                     <li><a href='/' class='nav_link'>Accueil</a></li>
                     <li><a href='about.html' class='nav_link'>À propos</a></li>
-                    <li><a href='project.html' class='nav_link active'>Mes projets</a></li>
+                    <li><a href='project.html' class='nav_link'>Mes projets</a></li>
                     <li><a href='contact.html' class='nav_link'>Contact</a></li>
                     <button type="button" aria-label="toggle theme" class="btn btn--icon">
                       <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
@@ -75,6 +75,8 @@
             >
               <i aria-hidden="true" class="fas fa-external-link-alt"></i>
             </a>
+            <a href="#" class="open-modal" data-modal-id="project-modal-1">Voir en détails</a>
+
           </div>
 
           <div class="project">
@@ -95,6 +97,7 @@
             >
               <i aria-hidden="true" class="fab fa-github"></i>
             </a>
+            <a href="#" class="open-modal" data-modal-id="project-modal-2">Voir en détails</a>
           </div>
 
           <div class="project">
@@ -125,6 +128,8 @@
           >
             <i aria-hidden="true" class="fas fa-external-link-alt"></i>
           </a>
+          <a href="#" class="open-modal" data-modal-id="project-modal-3">Voir en détails</a>
+
           </div>
           
           <div class="project" id="kasa-project">
@@ -148,6 +153,8 @@
             >
               <i aria-hidden="true" class="fab fa-github"></i>
             </a>
+            <a href="#" class="open-modal" data-modal-id="project-modal-4">Voir en détails</a>
+
           </div>
 
           <div class="project">
@@ -170,6 +177,8 @@
             >
               <i aria-hidden="true" class="fab fa-github"></i>
             </a>
+            <a href="#" class="open-modal" data-modal-id="project-modal-5">Voir en détails</a>
+
           </div>
         </div>
       </section>
@@ -185,7 +194,54 @@
         </div>
     </footer>
 
+<!-- Contenu des fenêtres modales -->
+<div class="project-modal" id="project-modal-1" style="display: none;">
+  <!-- Contenu de la fenêtre modale pour le projet 1 -->
+  <div class="project-modal-content">
+    <span class="close-modal">&times;</span>
+    <p>Hello World</p>
+    <img src="/images/Booki/Booki-1.png" alt="Image Header du Desktop" class="modal-image">
+    <div class="modal-controls">
+      <button class="modal-btn modal-btn-prev">Précédent</button>
+      <button class="modal-btn modal-btn-next">Suivant</button>
+    </div>
+  </div>
+</div>
+<div class="project-modal" id="project-modal-2" style="display: none;">
+  <!-- Contenu de la fenêtre modale pour le projet "Sophie Bluel - Archiwebos" -->
+  <div class="project-modal-content">
+    <span class="close-modal">&times;</span>
+    <p>Description du projet Sophie Bluel - Archiwebos</p>
+    <img src="/images/Booki/Booki-1.png" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image">
+    <div class="modal-controls">
+      <button class="modal-btn modal-btn-prev">Précédent</button>
+      <button class="modal-btn modal-btn-next">Suivant</button>
+    </div>
+  </div>
+</div>
+
+<div class="project-modal" id="project-modal-3" style="display: none;">
+  <!-- Contenu de la fenêtre modale pour le projet "Sophie Bluel - Archiwebos" -->
+  <div class="project-modal-content">
+    <span class="close-modal">&times;</span>
+    <p>Description du projet Sophie Bluel - Archiwebos</p>
+    <img src="/images/Booki/Booki-1.png" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image">
+    <div class="modal-controls">
+      <button class="modal-btn modal-btn-prev">Précédent</button>
+      <button class="modal-btn modal-btn-next">Suivant</button>
+    </div>
+  </div>
+</div>
+
+
  
+<div class="project-modal" id="project-modal-4" style="display: none;">
+  <!-- Contenu de la fenêtre modale pour le projet 4 -->
+</div>
+
+<div class="project-modal" id="project-modal-5" style="display: none;">
+  <!-- Contenu de la fenêtre modale pour le projet 5 -->
+</div>
     <script src="index.js"></script>
 
 </body>
