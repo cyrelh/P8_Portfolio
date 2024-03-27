@@ -30,3 +30,22 @@ const toggleTheme = () =>
 
 btnTheme.addEventListener('click', toggleTheme)
 
+
+// // Récupérer tous les liens de navigation
+// const navLinks = document.querySelectorAll('.nav_link');
+
+// // Fonction pour gérer le clic sur un lien de navigation
+// const handleNavLinkClick = (event) => {
+//     // Empêcher le comportement par défaut du lien (redirection)
+//     event.preventDefault();
+
+//     // Retirer la classe active de tous les liens de navigation
+//     navLinks.forEach(link => link.classList.remove('active'));
+
+//     // Ajouter la classe active à l'élément cliqué
+//     event.target.classList.add('active');
+// };
+
+// // Ajouter un gestionnaire d'événement de clic à chaque lien de navigation
+// navLinks.forEach(link => link.addEventListener('click', handleNavLinkClick));
+

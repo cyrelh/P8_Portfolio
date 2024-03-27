@@ -25,7 +25,7 @@ html{
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 1000vh;
 }
 
 body {
@@ -83,6 +83,7 @@ body {
   gap: 6rem;
   margin-left: 4rem;
 }
+
 .header_wrapper .nav_menu .nav_link {
   font-size: 2rem;
   font-weight: bold;
@@ -105,7 +106,8 @@ body {
   transition: transform 0.8s ease-in-out;
 }
 
-.header_wrapper .nav_menu .nav_link:hover::before {
+.header_wrapper .nav_menu .nav_link:hover::before,
+.header_wrapper .nav_menu .nav_link.active::before {
   transform-origin: right;
   transform: scaleX(1);
 }
@@ -152,8 +154,6 @@ cursor: pointer;
 .btn--outline:focus::before {
   right: 0;
 }
-
-
 
 .div_intro{
   display: flex;
@@ -270,7 +270,7 @@ cursor: pointer;
     max-width: 60rem;
     font-size: 1.4rem; /* Taille de la police */
     line-height: 2rem; /* Hauteur de ligne */
-    color: #2e292b; /* Couleur du texte */
+    color: var(--clr-bg-alt); /* Couleur du texte */
 }
 .about_cv {
   display: inline-block;
@@ -292,7 +292,7 @@ cursor: pointer;
 /*PROJETS*/
 
 .section-projects{
-  margin-top: 10%;
+  margin-top: 0;
 }
 
 .projects_grid {
@@ -315,13 +315,9 @@ cursor: pointer;
 
 .project:hover{
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
 
 }
-
-/* .project:hover {
-  transform: translateY(-7px);
-} */
 
 .project_description {
   margin: 3% 20% 3% 20%;
@@ -362,7 +358,7 @@ img {
 .section_title {
   font-family: 'Questrial', sans-serif; /* Utilisation de la même police que celle utilisée pour le titre "À propos" */
   font-size: 3rem; /* Taille de la police */
-  margin-top: 10%; /* Marge supérieure pour espacer le titre de la section */
+  margin-top: 0; /* Marge supérieure pour espacer le titre de la section */
   margin-bottom: 3rem; /* Marge inférieure pour espacer le titre de la section */
   text-align: center; /* Alignement centré */
 }
@@ -392,7 +388,7 @@ img {
   max-width: 60rem;
   font-size: 1.4rem; /* Taille de la police */
   line-height: 2rem; /* Hauteur de ligne */
-  color: #2e292b; /* Couleur du texte */
+  color: var(--clr-fg); /* Couleur du texte */
 }
 
 .about .skills_list {
@@ -435,7 +431,7 @@ img {
 
 .contact_title {
   font-family: 'Questrial', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 
@@ -477,7 +473,7 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10%;
 }
 
 .footer_wrapper {
@@ -490,7 +486,8 @@ footer {
 }
 
 .logo_wrapper img {
-  width:auto;
+  width:200px;
+  height:200px;
   border-radius: 30%;
 }
 
@@ -498,32 +495,15 @@ footer {
 /* RESPONSIVE */
 
 /* Pour les tablettes */
-/* @media screen and (max-width: 1024px) {
-
-  .projects_grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-
-  .header_wrapper {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .header_wrapper .nav_menu {
-    margin: 2rem 0;
-    text-align: center;
-  }
-} */
-
-/* Pour les tablettes */
 @media screen and (max-width: 1800px) {
 
+  .btn {
+    padding: 0 1rem;
+  }
+
   .projects_grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-
   .header_wrapper {
     flex-direction: column;
     align-items: center;
@@ -536,15 +516,34 @@ footer {
 }
 
 /* Pour les appareils mobiles */
+
 @media screen and (max-width: 768px) {
 
-  .projects_grid {
-    grid-template-columns: repeat(1, 1fr);
+  .btn {
+    padding: 0 0.5rem;
+  }
+  
+  .project img {
     width: 100%;
+    max-width: 100%; /* Utilisation de la largeur maximale pour l'image */
+    height: auto;
+    margin-top: 10px;
   }
 
-  .header_wrapper {
+  .projects_grid {
+    grid-template-columns: repeat(1, 1fr); /* Une colonne pour les appareils mobiles */
+    grid-gap: 1rem; /* Réduction de l'espace entre les projets */
+    width: calc(100% - 2rem); /* Largeur ajustée pour s'adapter à l'écran */
+  }
+  .project {
+    padding: 1rem; /* Réduction du padding pour éviter le débordement */
+  }
+  /* .header_wrapper {
     margin: 1rem 2rem;
+  } */
+
+  .header_wrapper {
+    margin: 1rem;
   }
   .header_wrapper .nav_menu {
     display: flex;
@@ -559,9 +558,15 @@ footer {
   .intro {
     padding: 2rem;
   }
-  .intro_avatar {
+  /* .intro_avatar {
     width: 50%;
+  } */
+  
+  .intro_avatar {
+    width: 70%;
+    max-width: 200px; /* Ajout d'une largeur maximale pour l'avatar */
   }
+  
   .about_intro_title {
     font-size: 2.5rem;
   }
@@ -577,9 +582,9 @@ footer {
   .section_title {
     font-size: 2.5rem;
   }
-  .project {
+  /* .project {
     padding: 1.5em;
-  }
+  } */
   .project_description {
     font-size: 1.2rem;
   }
@@ -656,7 +661,7 @@ footer {
     font-size: 3rem;
   }
   footer {
-    padding: 5px;
+    padding: 15px;
   }
 }
 
