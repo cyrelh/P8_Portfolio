@@ -91,6 +91,9 @@ modalTriggers.forEach(function(trigger) {
         }
     });
 });
+
+
+/*PARTIE MODALE*/
 // Sélectionnez la fenêtre modale et les boutons de contrôle
 const modal1 = document.getElementById("project-modal-1");
 const modalImage = modal1.querySelector(".modal-image");
@@ -132,9 +135,16 @@ const nextBtn2 = modal2.querySelector(".modal-btn-next");
 
 // Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
 const imagesSophieBluel = [
-  "/images/Booki/Booki-m-1.png",
-  "/images/Booki/Booki-m-2.png",
-  "/images/Booki/Booki-m-3.png"
+  "/images/Sophie/Sophie-1.png",
+  "/images/Sophie/Sophie-2.png",
+  "/images/Sophie/Sophie-3.png",
+  "/images/Sophie/Sophie-4.png",
+  "/images/Sophie/Sophie-5.png",
+  "/images/Sophie/Sophie-6.png",
+  "/images/Sophie/Sophie-7.png",
+  "/images/Sophie/Sophie-8.png",
+  "/images/Sophie/Sophie-9.png",
+  "/images/Sophie/Sophie-10.png"
 ];
 
 // Index de l'image actuellement affichée

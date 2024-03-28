@@ -519,8 +519,9 @@ footer {
   background-color: rgba(0, 0, 0, 0.9);
   padding: 20px;
   border-radius: 10px;
-  max-width: 80%;
-  max-height: 80%;
+  width: 1220px;
+  /* max-width: 80%;
+  max-height: 80%; */
   overflow: auto;
   z-index: 9999;
   transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
@@ -590,11 +591,47 @@ footer {
     margin: 2rem 0;
     text-align: center;
   }
+
+  .project-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 620px;
+    /* max-width: 80%;
+    max-height: 80%; */
+    overflow: auto;
+    z-index: 9999;
+    transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
+  
+  }
 }
+
+
 
 /* Pour les appareils mobiles */
 
 @media screen and (max-width: 768px) {
+
+  .project-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 420px;
+    /* max-width: 80%;
+    max-height: 80%; */
+    overflow: auto;
+    z-index: 9999;
+    transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
+  
+  }
 
   .btn {
     padding: 0 0.5rem;
@@ -691,6 +728,23 @@ footer {
 
 /* Pour les petits appareils mobiles */
 @media screen and (max-width: 480px) {
+
+  .project-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    /* max-width: 80%;
+    max-height: 80%; */
+    overflow: auto;
+    z-index: 9999;
+    transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
+  
+  }
   .header_wrapper .nav_menu {
     gap: 0.5rem;
   }
