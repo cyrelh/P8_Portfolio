@@ -180,11 +180,43 @@ function showNextImageNinaCarducci() {
 }
 
 // Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
-function showNextImageNinaCarducci() {
+function showPrevImageNinaCarducci() {
 	currentIndexNinaCarducci = (currentIndexNinaCarducci - 1 + imagesNinaCarducci.length) % imagesNinaCarducci.length;
   modalImage3.src = imagesNinaCarducci[currentIndexNinaCarducci];
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
 nextBtn3.addEventListener("click", showNextImageNinaCarducci);
-prevBtn3.addEventListener("click", showNextImageNinaCarducci);
+prevBtn3.addEventListener("click", showPrevImageNinaCarducci);
+
+// Sélectionnez la fenêtre modale 4 et les boutons de contrôle
+const modal4 = document.getElementById("project-modal-4");
+const modalImage4 = modal4.querySelector(".modal-image");
+const prevBtn4 = modal4.querySelector(".modal-btn-prev");
+const nextBtn4 = modal4.querySelector(".modal-btn-next");
+
+// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
+const imagesKasa = [
+  "/images/Booki/Booki-m-1.png",
+  "/images/Booki/Booki-m-2.png",
+  "/images/Booki/Booki-m-3.png"
+];
+
+// Index de l'image actuellement affichée
+let currentIndexKasa = 0;
+
+// Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
+function showNextImageKasa() {
+	currentIndexKasa = (currentIndexKasa + 1) % imagesKasa.length;
+  modalImage4.src = imagesKasa[currentIndexKasa];
+}
+
+// Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
+function showPrevImageKasa() {
+	currentIndexKasa = (currentIndexKasa - 1 + imagesKasa.length) % imagesKasa.length;
+  modalImage4.src = imagesKasa[currentIndexKasa];
+}
+
+// Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
+nextBtn4.addEventListener("click", showNextImageKasa);
+prevBtn4.addEventListener("click", showPrevImageKasa);
