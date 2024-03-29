@@ -104,7 +104,7 @@ const nextBtn = modal1.querySelector(".modal-btn-next");
 const images = [
   "/images/Booki/Booki-1.png",
   "/images/Booki/Booki-2.png",
-  "/images/Booki/Booki-3.png"
+  "/images/Booki/Booki-3.png",
 ];
 
 // Index de l'image actuellement affichée
@@ -234,7 +234,7 @@ prevBtn4.addEventListener("click", showPrevImageKasa);
 // Sélectionnez la fenêtre modale 5 et les boutons de contrôle
 const modal5 = document.getElementById("project-modal-5");
 const modalImage5 = modal5.querySelector(".modal-image");
-const prevBt5 = modal5.querySelector(".modal-btn-prev");
+const prevBtn5 = modal5.querySelector(".modal-btn-prev"); // Correction du nom de la variable
 const nextBtn5 = modal5.querySelector(".modal-btn-next");
 
 // Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
@@ -249,16 +249,19 @@ let currentIndexGrimoire = 0;
 
 // Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
 function showNextImageGrimoire() {
-	currentIndexGrimoire = (currentIndexGrimoire + 1) % imagesGrimoire.length;
+  currentIndexGrimoire = (currentIndexGrimoire + 1) % imagesGrimoire.length;
   modalImage5.src = imagesGrimoire[currentIndexGrimoire];
 }
 
 // Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
 function showPrevImageGrimoire() {
-	currentIndexGrimoire = (currentIndexGrimoire - 1 + imagesGrimoire.length) % imagesGrimoire.length;
-	modalImage5.src = imagesGrimoire[currentIndexGrimoire];
+  currentIndexGrimoire = (currentIndexGrimoire - 1 + imagesGrimoire.length) % imagesGrimoire.length;
+  modalImage5.src = imagesGrimoire[currentIndexGrimoire];
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
 nextBtn5.addEventListener("click", showNextImageGrimoire);
 prevBtn5.addEventListener("click", showPrevImageGrimoire);
+
+
+
