@@ -89,7 +89,7 @@ const imageContainer = modal1.querySelector(".image-container");
 const images = [
   "/images/Booki/Booki-1.png",
   "/images/Booki/Booki-2.png",
-  "/images/Booki/Booki-3.png",
+  "/images/Booki/Booki-3.png"
 ];
 
 // Index de l'image actuellement affichée
@@ -140,45 +140,95 @@ nextBtn.addEventListener("click", showNextImage);
 prevBtn.addEventListener("click", showPrevImage);
 
 
-
-// Sélectionnez la fenêtre modale 2 et les boutons de contrôle
+// Sélectionnez la fenêtre modale et les boutons de contrôle
 const modal2 = document.getElementById("project-modal-2");
-const modalImage2 = modal2.querySelector(".modal-image");
-const prevBtn2 = modal2.querySelector(".modal-btn-prev");
-const nextBtn2 = modal2.querySelector(".modal-btn-next");
+const modalTextSophieBluel = modal2.querySelector("#modal-text");
+const prevBtnSophieBluel = modal2.querySelector(".modal-btn-prev");
+const nextBtnSophieBluel = modal2.querySelector(".modal-btn-next");
+const imageContainerSophieBluel = modal2.querySelector(".image-container");
 
-// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
+// Tableau des chemins d'accès des images
 const imagesSophieBluel = [
   "/images/Sophie/Sophie-1.png",
   "/images/Sophie/Sophie-2.png",
-  "/images/Sophie/Sophie-3.png",
-  "/images/Sophie/Sophie-4.png",
-  "/images/Sophie/Sophie-5.png",
-  "/images/Sophie/Sophie-6.png",
-  "/images/Sophie/Sophie-7.png",
-  "/images/Sophie/Sophie-8.png",
-  "/images/Sophie/Sophie-9.png",
-  "/images/Sophie/Sophie-10.png"
+  "/images/Sophie/Sophie-3.png"
 ];
 
 // Index de l'image actuellement affichée
 let currentIndexSophieBluel = 0;
+let showingTextSophieBluel = true; // Variable pour indiquer si le texte est affiché
 
-// Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
+// Fonction pour afficher l'image suivante
 function showNextImageSophieBluel() {
-  currentIndexSophieBluel = (currentIndexSophieBluel + 1) % imagesSophieBluel.length;
-  modalImage2.src = imagesSophieBluel[currentIndexSophieBluel];
+  // Si nous montrons actuellement du texte, passer à l'image suivante
+  if (showingTextSophieBluel) {
+    // Masquer le texte
+    modalTextSophieBluel.style.display = "none";
+    // Afficher le conteneur d'image
+    imageContainerSophieBluel.style.display = "block";
+    currentIndexSophieBluel++; // Incrémenter l'index pour afficher la première image
+    showImageSophieBluel();
+    showingTextSophieBluel = false; // Mettre à jour l'état pour indiquer que nous affichons maintenant une image
+    prevBtnSophieBluel.style.display = "inline-block"; // Afficher le bouton précédent
+  } else {
+    currentIndexSophieBluel = (currentIndexSophieBluel + 1) % imagesSophieBluel.length;
+    showImageSophieBluel();
+  }
 }
 
-// Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
+// Fonction pour afficher l'image précédente
 function showPrevImageSophieBluel() {
-  currentIndexSophieBluel = (currentIndexSophieBluel - 1 + imagesSophieBluel.length) % imagesSophieBluel.length;
-  modalImage2.src = imagesSophieBluel[currentIndexSophieBluel];
+  if (currentIndexSophieBluel === 0) {
+    // Si nous sommes sur la première image et que le texte est masqué, afficher le texte
+    if (!showingTextSophieBluel) {
+      modalTextSophieBluel.style.display = "block";
+      imageContainerSophieBluel.style.display = "none";
+      showingTextSophieBluel = true; // Mettre à jour l'état pour indiquer que nous affichons maintenant du texte
+      prevBtnSophieBluel.style.display = "none"; // Cacher le bouton précédent
+    }
+  } else {
+    currentIndexSophieBluel = (currentIndexSophieBluel - 1 + imagesSophieBluel.length) % imagesSophieBluel.length;
+    showImageSophieBluel();
+  }
 }
 
-// Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
-nextBtn2.addEventListener("click", showNextImageSophieBluel);
-prevBtn2.addEventListener("click", showPrevImageSophieBluel);
+// Fonction pour afficher l'image correspondante
+function showImageSophieBluel() {
+  imageContainerSophieBluel.innerHTML = `<img src="${imagesSophieBluel[currentIndexSophieBluel]}" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image">`;
+}
+
+// Écouteurs d'événements pour les boutons "Next" et "Back"
+nextBtnSophieBluel.addEventListener("click", showNextImageSophieBluel);
+prevBtnSophieBluel.addEventListener("click", showPrevImageSophieBluel);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Sélectionnez la fenêtre modale 3 et les boutons de contrôle

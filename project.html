@@ -43,7 +43,7 @@
     <main>
       <!-- SECTION PROJETS -->
       <section id="projects" class="section-projects">
-        <h2 class="section_title"> Mes projets</h2>
+        <h1 class="section_title"> Mes projets</h1>
 
         <div class="projects_grid">
           <div class="project">
@@ -62,12 +62,7 @@
             <p>Analyser et découper la maquette fournie afin de préparer l'intégration du contenu demandait de la précision et de la méthodologie. Il était nécessaire de comprendre la structure de la page et d'identifier les éléments à intégrer.</p>
             <h4>4-Intégration du contenu </h4>
             <p>Une fois la maquette découpée, il fallait coder la page en respectant le découpage pour obtenir un résultat conforme à la maquette. Cela impliquait d'appliquer les styles CSS nécessaires pour reproduire fidèlement le design.</p>
-            
             </p>
-
-  
-              
-
             <ul class="project_stack">
               <li class="project_stack-item">HTML</li>
               <li class="project_stack-item">CSS</li>
@@ -95,10 +90,14 @@
           </div>
 
           <div class="project">
-            <h3>Sophie Bluel - Archiwebos <br>Création d'une page web dynamique avec JavaScript </br>  </h3>
+            <h1>Sophie Bluel - Archiwebos</h1>
+            <h2>Création d'une page web dynamique avec JavaScript</h2>
+            <p>Création d'une interface web interactive en utilisant JavaScript. Réalisation de la page de connexion ainsi que des fenêtres modales pour l'ajout, la modification et la suppression d'images.
+            </p>
             <img src="./images/Sophie-bluel_Archiwebos.webp" alt="Le site de Sophie Bluel - agence Archiwebos"/>
             <p class="project_description">
-              Création d'une interface web interactive en utilisant JavaScript. Réalisation de la page de connexion ainsi que des fenêtres modales pour l'ajout, la modification et la suppression d'images.
+              <h3>Difficultés rencontrées et surmontées</h3>
+              <h4>1-Compréhension des langages HTML et CSS </h4>
             </p>
             <ul class="project_stack">
               <li class="project_stack-item">Javascript</li>
@@ -114,9 +113,11 @@
             </a>
             <a href="#" class="open-modal" data-modal-id="project-modal-2">Aperçu du projet</a>
           </div>
+          
 
           <div class="project">
-            <h3>Nina Carduccci - Optimisation et Debug d'un site web</h3>
+            <h1>Nina Carduccci</h1>
+            <h2>Optimisation et Debug d'un site web</h2>
             <img src="./images/Nina Carducci.webp" alt="Le site de Nina Carducci"/>
             <p class="project_description">
               Optimisation globale du site web d'une photographe, en mettant l'accent sur l'accessibilité, les performances techniques et la mise en œuvre d'un référencement local efficace pour augmenter sa visibilité.
@@ -236,17 +237,29 @@
 
 
 <div class="project-modal" id="project-modal-2" style="display: none;">
-  <!-- Contenu de la fenêtre modale pour le projet "Sophie Bluel - Archiwebos" -->
   <div class="project-modal-content">
     <span class="close-modal">&times;</span>
-    <p>Aperçu du projet Sophie Bluel - Archiwebos</p>
-    <img src="/images/Sophie-bluel_Archiwebos.webp" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image">
+    <h2>Description du projet Sophie Bluel - Archiwebos</h2>
+    <p id="modal-text">
+
+      <h3>Compétences acquises</h3>
+      <p>Intégrer du contenu conformément à une maquette avec HTML et CSS</p>
+      <p>Implémenter une interface responsive avec HTML et CSS</p>
+      <p>Versionner son projet avec Git et GitHub</p>
+      <p>Installer un environnement de développement front-end</p>
+      <h3>Ressources</h3>
+      <p>Maquettes du site Booki</p>
+      <p>Note de synthèse pour intégration</p>
+    </p>
+      </p>
+    <div class="image-container" style="display: none;"></div>
     <div class="modal-controls">
       <button class="modal-btn modal-btn-prev">Précédent</button>
       <button class="modal-btn modal-btn-next">Suivant</button>
     </div>
   </div>
 </div>
+
 
 <div class="project-modal" id="project-modal-3" style="display: none;">
   <div class="project-modal-content">
