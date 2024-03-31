@@ -202,128 +202,182 @@ nextBtnSophieBluel.addEventListener("click", showNextImageSophieBluel);
 prevBtnSophieBluel.addEventListener("click", showPrevImageSophieBluel);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Sélectionnez la fenêtre modale 3 et les boutons de contrôle
+// Sélectionnez la fenêtre modale et les boutons de contrôle
 const modal3 = document.getElementById("project-modal-3");
-const modalImage3 = modal3.querySelector(".modal-image");
-const prevBtn3 = modal3.querySelector(".modal-btn-prev");
-const nextBtn3 = modal3.querySelector(".modal-btn-next");
+const modalTextNinaCarduccci = modal3.querySelector("#modal-text");
+const prevBtnNinaCarduccci = modal3.querySelector(".modal-btn-prev");
+const nextBtnNinaCarduccci = modal3.querySelector(".modal-btn-next");
+const imageContainerNinaCarduccci = modal3.querySelector(".image-container");
 
-// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
-const imagesNinaCarducci = [
-  "/images/Booki/Booki-m-1.png",
-  "/images/Booki/Booki-m-2.png",
-  "/images/Booki/Booki-m-3.png"
+// Tableau des chemins d'accès des images
+const imagesNinaCarduccci = [
+  "/images/Sophie/Sophie-1.png",
+  "/images/Sophie/Sophie-2.png",
+
 ];
 
 // Index de l'image actuellement affichée
-let currentIndexNinaCarducci = 0;
+let currentIndexNinaCarduccci = 0;
+let showingTextNinaCarduccci  = true; // Variable pour indiquer si le texte est affiché
 
-// Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
-function showNextImageNinaCarducci() {
-	currentIndexNinaCarducci = (currentIndexNinaCarducci + 1) % imagesNinaCarducci.length;
-  modalImage3.src = imagesNinaCarducci[currentIndexNinaCarducci];
+// Fonction pour afficher l'image suivante
+function showNextImageNinaCarduccci () {
+  // Si nous montrons actuellement du texte, passer à l'image suivante
+  if (showingTextNinaCarduccci ) {
+    // Masquer le texte
+    modalTextNinaCarduccci.style.display = "none";
+    // Afficher le conteneur d'image
+    imageContainerNinaCarduccci.style.display = "block";
+    currentIndexNinaCarduccci++; // Incrémenter l'index pour afficher la première image
+    showImageNinaCarduccci();
+    showingTextNinaCarduccci  = false; // Mettre à jour l'état pour indiquer que nous affichons maintenant une image
+    prevBtnNinaCarduccci.style.display = "inline-block"; // Afficher le bouton précédent
+  } else {
+    currentIndexNinaCarduccci = (currentIndexNinaCarduccci + 1) % imagesNinaCarduccci.length;
+    showImageNinaCarduccci();
+  }
 }
 
-// Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
-function showPrevImageNinaCarducci() {
-	currentIndexNinaCarducci = (currentIndexNinaCarducci - 1 + imagesNinaCarducci.length) % imagesNinaCarducci.length;
-  modalImage3.src = imagesNinaCarducci[currentIndexNinaCarducci];
+// Fonction pour afficher l'image précédente
+function showPrevImageNinaCarduccci() {
+  if (currentIndexNinaCarduccci=== 0) {
+    // Si nous sommes sur la première image et que le texte est masqué, afficher le texte
+    if (!showingTextNinaCarduccci) {
+      modalTextNinaCarduccci.style.display = "block";
+      imageContainerNinaCarduccci.style.display = "none";
+      showingTextNinaCarduccci = true; // Mettre à jour l'état pour indiquer que nous affichons maintenant du texte
+      prevBtnNinaCarduccci.style.display = "none"; // Cacher le bouton précédent
+    }
+  } else {
+    currentIndexNinaCarduccci = (currentIndexNinaCarduccci - 1 + imagesNinaCarduccci.length) % imagesNinaCarduccci.length;
+    showImageNinaCarduccci();
+  }
 }
 
-// Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
-nextBtn3.addEventListener("click", showNextImageNinaCarducci);
-prevBtn3.addEventListener("click", showPrevImageNinaCarducci);
+// Fonction pour afficher l'image correspondante
+function showImageNinaCarduccci() {
+  imageContainerNinaCarduccci.innerHTML = `<img src="${imagesNinaCarduccci[currentIndexNinaCarduccci]}" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image">`;
+}
 
-// Sélectionnez la fenêtre modale 4 et les boutons de contrôle
+// Écouteurs d'événements pour les boutons "Next" et "Back"
+nextBtnNinaCarduccci.addEventListener("click", showNextImageNinaCarduccci);
+prevBtnNinaCarduccci.addEventListener("click", showPrevImageNinaCarduccci);
+
+
+// Sélectionnez la fenêtre modale et les boutons de contrôle pour le projet Kasa
 const modal4 = document.getElementById("project-modal-4");
-const modalImage4 = modal4.querySelector(".modal-image");
-const prevBtn4 = modal4.querySelector(".modal-btn-prev");
-const nextBtn4 = modal4.querySelector(".modal-btn-next");
+const modalTextKasa = modal4.querySelector("#modal-text"); // Correction du sélecteur
+const prevBtnKasa = modal4.querySelector(".modal-btn-prev");
+const nextBtnKasa = modal4.querySelector(".modal-btn-next");
+const imageContainerKasa = modal4.querySelector(".image-container");
 
-// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
+// Tableau des chemins d'accès des images pour le projet Kasa
 const imagesKasa = [
-  "/images/Booki/Booki-m-1.png",
-  "/images/Booki/Booki-m-2.png",
-  "/images/Booki/Booki-m-3.png"
+  "/images/Sophie/Sophie-1.png",
+  "/images/Sophie/Sophie-2.png",
+  "/images/Sophie/Sophie-3.png"
 ];
 
-// Index de l'image actuellement affichée
+// Index de l'image actuellement affichée pour le projet Kasa
 let currentIndexKasa = 0;
+let showingTextKasa = true;
 
-// Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
+// Fonction pour afficher l'image suivante pour le projet Kasa
 function showNextImageKasa() {
-	currentIndexKasa = (currentIndexKasa + 1) % imagesKasa.length;
-  modalImage4.src = imagesKasa[currentIndexKasa];
+  if (showingTextKasa) {
+    modalTextKasa.style.display = "none";
+    imageContainerKasa.style.display = "block";
+    currentIndexKasa++;
+    showImageKasa();
+    showingTextKasa = false;
+    prevBtnKasa.style.display = "inline-block";
+  } else {
+    currentIndexKasa = (currentIndexKasa + 1) % imagesKasa.length;
+    showImageKasa();
+  }
 }
 
-// Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
+// Fonction pour afficher l'image précédente pour le projet Kasa
 function showPrevImageKasa() {
-	currentIndexKasa = (currentIndexKasa - 1 + imagesKasa.length) % imagesKasa.length;
-  modalImage4.src = imagesKasa[currentIndexKasa];
+  if (currentIndexKasa === 0) {
+    if (!showingTextKasa) {
+      modalTextKasa.style.display = "block";
+      imageContainerKasa.style.display = "none";
+      showingTextKasa = true;
+      prevBtnKasa.style.display = "none";
+    }
+  } else {
+    currentIndexKasa = (currentIndexKasa - 1 + imagesKasa.length) % imagesKasa.length;
+    showImageKasa();
+  }
 }
 
-// Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
-nextBtn4.addEventListener("click", showNextImageKasa);
-prevBtn4.addEventListener("click", showPrevImageKasa);
+// Fonction pour afficher l'image correspondante pour le projet Kasa
+function showImageKasa() {
+  imageContainerKasa.innerHTML = `<img src="${imagesKasa[currentIndexKasa]}" alt="Image du projet Kasa" class="modal-image">`;
+}
 
-// Sélectionnez la fenêtre modale 5 et les boutons de contrôle
+// Écouteurs d'événements pour les boutons "Next" et "Back" pour le projet Kasa
+nextBtnKasa.addEventListener("click", showNextImageKasa);
+prevBtnKasa.addEventListener("click", showPrevImageKasa);
+
+
+// Sélectionnez la fenêtre modale et les boutons de contrôle pour le projet Kasa
 const modal5 = document.getElementById("project-modal-5");
-const modalImage5 = modal5.querySelector(".modal-image");
-const prevBtn5 = modal5.querySelector(".modal-btn-prev"); // Correction du nom de la variable
-const nextBtn5 = modal5.querySelector(".modal-btn-next");
+const modalTextGrimoire = modal5.querySelector("#modal-text"); // Correction du sélecteur
+const prevBtnGrimoire = modal5.querySelector(".modal-btn-prev");
+const nextBtnGrimoire= modal5.querySelector(".modal-btn-next");
+const imageContainerGrimoire= modal5.querySelector(".image-container");
 
-// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
+// Tableau des chemins d'accès des images pour le projet Kasa
 const imagesGrimoire = [
-  "/images/Booki/Booki-m-1.png",
-  "/images/Booki/Booki-m-2.png",
-  "/images/Booki/Booki-m-3.png"
+  "/images/Sophie/Sophie-1.png",
+  "/images/Sophie/Sophie-2.png",
+  "/images/Sophie/Sophie-3.png"
 ];
 
-// Index de l'image actuellement affichée
+// Index de l'image actuellement affichée pour le projet Kasa
 let currentIndexGrimoire = 0;
+let showingTextGrimoire = true;
 
-// Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
+// Fonction pour afficher l'image suivante pour le projet Kasa
 function showNextImageGrimoire() {
-  currentIndexGrimoire = (currentIndexGrimoire + 1) % imagesGrimoire.length;
-  modalImage5.src = imagesGrimoire[currentIndexGrimoire];
+  if (showingTextGrimoire) {
+    modalTextGrimoire.style.display = "none";
+    imageContainerGrimoire.style.display = "block";
+    currentIndexGrimoire++;
+    showImageGrimoire();
+    showingTextGrimoire= false;
+    prevBtnGrimoire.style.display = "inline-block";
+  } else {
+    currentIndexGrimoire = (currentIndexGrimoire + 1) % imagesGrimoire.length;
+    showImageGrimoire();
+  }
 }
 
-// Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
+// Fonction pour afficher l'image précédente pour le projet Kasa
 function showPrevImageGrimoire() {
-  currentIndexGrimoire = (currentIndexGrimoire - 1 + imagesGrimoire.length) % imagesGrimoire.length;
-  modalImage5.src = imagesGrimoire[currentIndexGrimoire];
+  if (currentIndexGrimoire === 0) {
+    if (!showingTextGrimoire) {
+      modalTextGrimoire.style.display = "block";
+      imageContainerGrimoire.style.display = "none";
+      showingTextGrimoire = true;
+      prevBtnGrimoire.style.display = "none";
+    }
+  } else {
+    currentIndexGrimoire = (currentIndexGrimoire - 1 + imagesGrimoire.length) % imagesGrimoire.length;
+    showImageGrimoire();
+  }
 }
 
-// Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
-nextBtn5.addEventListener("click", showNextImageGrimoire);
-prevBtn5.addEventListener("click", showPrevImageGrimoire);
+// Fonction pour afficher l'image correspondante pour le projet Kasa
+function showImageGrimoire() {
+  imageContainerGrimoire.innerHTML = `<img src="${imagesGrimoire[currentIndexGrimoire]}" alt="Image du projet Kasa" class="modal-image">`;
+}
+
+// Écouteurs d'événements pour les boutons "Next" et "Back" pour le projet Kasa
+nextBtnGrimoire.addEventListener("click", showNextImageGrimoire);
+prevBtnGrimoire.addEventListener("click", showPrevImageGrimoire);
+
+
 
