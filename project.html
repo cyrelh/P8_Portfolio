@@ -48,11 +48,26 @@
         <div class="projects_grid">
           <div class="project">
             <!-- Dans le projet Booki -->
-            <h3>Booki <br> Création d'un site web de réservation d'hébergements </br> </h3>
-            <img src="./images/Booki.webp" alt="Le site de Booki"/>
-            <p class="project_description">
-              Développement et intégration de l'interface front-end d'un site de location d’hébergements basée sur une conception réalisée avec Figma. Création d'une application web entièrement responsive, garantissant une expérience utilisateur optimale sur tous les appareils.
+            <h1>Booki</h1>
+            <h2>Création d'un site web de réservation d'hébergements</h2>
+            <p>Développement et intégration de l'interface front-end d'un site de location d’hébergements basée sur une conception réalisée avec Figma. <br> Création d'une application web entièrement responsive, garantissant une expérience utilisateur optimale sur tous les appareils.</p>
+            <img src="./images/Booki.png" alt="Le site de Booki" id="img-pic"/>
+            <p class="project_description">            
+              <h3>Difficultés rencontrées et surmontées</h3>
+              <h4>1-Compréhension des langages HTML et CSS </h4>
+              <p>Il était essentiel de comprendre les principes de base du HTML et du CSS pour pouvoir créer une page web statique et responsive. Cela impliquait de maîtriser la structuration du contenu avec HTML et la mise en forme avec CSS.</p>
+              <h4>2-Utilisation d'outils professionnels  </h4>
+              <p>Se familiariser avec des outils tels que Visual Studio Code pour l'édition du code, Git pour la gestion de version et GitHub pour le partage du code était nécessaire. Apprendre à utiliser efficacement ces outils est une étape importante dans le développement professionnel.</p>
+            <h4>3-Découpage de la maquette </h4>
+            <p>Analyser et découper la maquette fournie afin de préparer l'intégration du contenu demandait de la précision et de la méthodologie. Il était nécessaire de comprendre la structure de la page et d'identifier les éléments à intégrer.</p>
+            <h4>4-Intégration du contenu </h4>
+            <p>Une fois la maquette découpée, il fallait coder la page en respectant le découpage pour obtenir un résultat conforme à la maquette. Cela impliquait d'appliquer les styles CSS nécessaires pour reproduire fidèlement le design.</p>
+            
             </p>
+
+  
+              
+
             <ul class="project_stack">
               <li class="project_stack-item">HTML</li>
               <li class="project_stack-item">CSS</li>
@@ -75,7 +90,7 @@
             >
               <i aria-hidden="true" class="fas fa-external-link-alt"></i>
             </a>
-            <a href="#" class="open-modal" data-modal-id="project-modal-1">Voir en détails</a>
+            <a href="#" class="open-modal" data-modal-id="project-modal-1">Aperçu du projet</a>
 
           </div>
 
@@ -97,7 +112,7 @@
             >
               <i aria-hidden="true" class="fab fa-github"></i>
             </a>
-            <a href="#" class="open-modal" data-modal-id="project-modal-2">Voir en détails</a>
+            <a href="#" class="open-modal" data-modal-id="project-modal-2">Aperçu du projet</a>
           </div>
 
           <div class="project">
@@ -128,7 +143,7 @@
           >
             <i aria-hidden="true" class="fas fa-external-link-alt"></i>
           </a>
-          <a href="#" class="open-modal" data-modal-id="project-modal-3">Voir en détails</a>
+          <a href="#" class="open-modal" data-modal-id="project-modal-3">Aperçu du projet</a>
 
           </div>
           
@@ -152,7 +167,7 @@
             >
               <i aria-hidden="true" class="fab fa-github"></i>
             </a>
-            <a href="#" class="open-modal" data-modal-id="project-modal-4">Voir en détails</a>
+            <a href="#" class="open-modal" data-modal-id="project-modal-4">Aperçu du projet</a>
 
           </div>
 
@@ -169,14 +184,14 @@
             </ul>
 
             <a
-              href="https://github.com/cyrelh/P7_backend.git"
+              href="https://github.com/cyrelh/P7_Grimoire_backend"
               target="_blank"
               aria-label="source code"
               class="link link--icon"
             >
               <i aria-hidden="true" class="fab fa-github"></i>
             </a>
-            <a href="#" class="open-modal" data-modal-id="project-modal-5">Voir en détails</a>
+            <a href="#" class="open-modal" data-modal-id="project-modal-5">Aperçu du projet</a>
 
           </div>
         </div>
@@ -198,20 +213,33 @@
   <!-- Contenu de la fenêtre modale pour le projet 1 -->
   <div class="project-modal-content">
     <span class="close-modal">&times;</span>
-    <p>Description du projet Booki</p>
-    <img src="/images/Booki/Booki-1.png" alt="Image du projet Booki" class="modal-image">
-    <video src="/videos/sample.mp4" controls style="display: none;" class="modal-video"></video>
+    <h2>Description du projet Booki</h2>
+    <!-- Ajout du texte initial -->
+    <p id="modal-text">
+      <h3>Compétences acquises</h3>
+      <p>Intégrer du contenu conformément à une maquette avec HTML et CSS</p>
+      <p>Implémenter une interface responsive avec HTML et CSS</p>
+      <p>Versionner son projet avec Git et GitHub</p>
+      <p>Installer un environnement de développement front-end</p>
+      <h3>Ressources</h3>
+      <p>Maquettes du site Booki</p>
+      <p>Note de synthèse pour intégration</p>
+    </p>
+    <!-- Ajout d'un conteneur pour les images -->
+    <div class="image-container" style="display: none;"></div>
     <div class="modal-controls">
-      <button class="modal-btn modal-btn-prev">Précédent</button>
+      <button class="modal-btn modal-btn-prev" style="display: none;">Précédent</button>
       <button class="modal-btn modal-btn-next">Suivant</button>
     </div>
   </div>
 </div>
+
+
 <div class="project-modal" id="project-modal-2" style="display: none;">
   <!-- Contenu de la fenêtre modale pour le projet "Sophie Bluel - Archiwebos" -->
   <div class="project-modal-content">
     <span class="close-modal">&times;</span>
-    <p>Description du projet Sophie Bluel - Archiwebos</p>
+    <p>Aperçu du projet Sophie Bluel - Archiwebos</p>
     <img src="/images/Sophie-bluel_Archiwebos.webp" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image">
     <div class="modal-controls">
       <button class="modal-btn modal-btn-prev">Précédent</button>
@@ -235,7 +263,7 @@
 <div class="project-modal" id="project-modal-4" style="display: none;">
   <div class="project-modal-content">
     <span class="close-modal">&times;</span>
-    <p>Description du projet Kasa</p>
+    <p>Aperçu du projet Kasa</p>
     <img src="/images/Booki/Booki-1.png" alt="Image du projet Kasa" class="modal-image">
     <div class="modal-controls">
       <button class="modal-btn modal-btn-prev">Précédent</button>
@@ -247,7 +275,7 @@
 <div class="project-modal" id="project-modal-5" style="display: none;">
   <div class="project-modal-content">
     <span class="close-modal">&times;</span>
-    <p>Description du projet Mon Vieux Grimoire</p>
+    <p>Aperçu du projet Mon Vieux Grimoire</p>
     <img src="/images/Booki/Booki-1.png" alt="Image du projet Mon Vieux Grimoire" class="modal-image">
     <div class="modal-controls">
       <button class="modal-btn modal-btn-prev">Précédent</button>

@@ -44,24 +44,6 @@ btnTheme.addEventListener('click', toggleTheme);
 
 
 
-// // Récupérer tous les liens de navigation
-// const navLinks = document.querySelectorAll('.nav_link');
-
-// // Fonction pour gérer le clic sur un lien de navigation
-// const handleNavLinkClick = (event) => {
-//     // Empêcher le comportement par défaut du lien (redirection)
-//     event.preventDefault();
-
-//     // Retirer la classe active de tous les liens de navigation
-//     navLinks.forEach(link => link.classList.remove('active'));
-
-//     // Ajouter la classe active à l'élément cliqué
-//     event.target.classList.add('active');
-// };
-
-// // Ajouter un gestionnaire d'événement de clic à chaque lien de navigation
-// navLinks.forEach(link => link.addEventListener('click', handleNavLinkClick));
-
 // Récupérer tous les éléments qui ouvrent les modales
 const modalTriggers = document.querySelectorAll(".open-modal");
 
@@ -93,12 +75,15 @@ modalTriggers.forEach(function(trigger) {
 });
 
 
+
+
 /*PARTIE MODALE*/
 // Sélectionnez la fenêtre modale et les boutons de contrôle
 const modal1 = document.getElementById("project-modal-1");
-const modalImage = modal1.querySelector(".modal-image");
+const modalText = modal1.querySelector("#modal-text");
 const prevBtn = modal1.querySelector(".modal-btn-prev");
 const nextBtn = modal1.querySelector(".modal-btn-next");
+const imageContainer = modal1.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images
 const images = [
@@ -109,22 +94,51 @@ const images = [
 
 // Index de l'image actuellement affichée
 let currentIndex = 0;
+let showingText = true; // Variable pour indiquer si le texte est affiché
 
 // Fonction pour afficher l'image suivante
 function showNextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  modalImage.src = images[currentIndex];
+  // Si nous montrons actuellement du texte, passer à l'image suivante
+  if (showingText) {
+    // Masquer le texte
+    modalText.style.display = "none";
+    // Afficher le conteneur d'image
+    imageContainer.style.display = "block";
+    currentIndex++; // Incrémenter l'index pour afficher la première image
+    showImage();
+    showingText = false; // Mettre à jour l'état pour indiquer que nous affichons maintenant une image
+    prevBtn.style.display = "inline-block"; // Afficher le bouton précédent
+  } else {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage();
+  }
 }
 
 // Fonction pour afficher l'image précédente
 function showPrevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  modalImage.src = images[currentIndex];
+  if (currentIndex === 0) {
+    // Si nous sommes sur la première image et que le texte est masqué, afficher le texte
+    if (!showingText) {
+      modalText.style.display = "block";
+      imageContainer.style.display = "none";
+      showingText = true; // Mettre à jour l'état pour indiquer que nous affichons maintenant du texte
+      prevBtn.style.display = "none"; // Cacher le bouton précédent
+    }
+  } else {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+  }
+}
+
+// Fonction pour afficher l'image correspondante
+function showImage() {
+  imageContainer.innerHTML = `<img src="${images[currentIndex]}" alt="Image du projet Booki" class="modal-image">`;
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back"
 nextBtn.addEventListener("click", showNextImage);
 prevBtn.addEventListener("click", showPrevImage);
+
 
 
 // Sélectionnez la fenêtre modale 2 et les boutons de contrôle
@@ -262,6 +276,4 @@ function showPrevImageGrimoire() {
 // Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
 nextBtn5.addEventListener("click", showNextImageGrimoire);
 prevBtn5.addEventListener("click", showPrevImageGrimoire);
-
-
 

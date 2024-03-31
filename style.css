@@ -342,6 +342,17 @@ img {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 3px 4px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
+#img-pic{
+  width: auto;
+  height: 10%;
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: left top;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 3px 4px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
 .project_stack {
   display: flex;
   flex-wrap: wrap;
