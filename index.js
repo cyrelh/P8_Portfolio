@@ -89,7 +89,12 @@ const imageContainer = modal1.querySelector(".image-container");
 const images = [
   "/images/Booki/Booki-1.png",
   "/images/Booki/Booki-2.png",
-  "/images/Booki/Booki-3.png"
+  "/images/Booki/Booki-3.png",
+  "/images/Booki/Booki-m-1.png",
+  "/images/Booki/Booki-m-2.png",
+  "/images/Booki/Booki-m-3.png",
+  "/images/Booki/Booki-m-4.png",
+  "/images/Booki/Booki-m-5.png"
 ];
 
 // Index de l'image actuellement affichée
@@ -119,7 +124,7 @@ function showPrevImage() {
   if (currentIndex === 0) {
     // Si nous sommes sur la première image et que le texte est masqué, afficher le texte
     if (!showingText) {
-      modalText.style.display = "block";
+      modalText.style.display = "none";
       imageContainer.style.display = "none";
       showingText = true; // Mettre à jour l'état pour indiquer que nous affichons maintenant du texte
       prevBtn.style.display = "none"; // Cacher le bouton précédent
@@ -181,7 +186,7 @@ function showPrevImageSophieBluel() {
   if (currentIndexSophieBluel === 0) {
     // Si nous sommes sur la première image et que le texte est masqué, afficher le texte
     if (!showingTextSophieBluel) {
-      modalTextSophieBluel.style.display = "block";
+      modalTextSophieBluel.style.display = "none";
       imageContainerSophieBluel.style.display = "none";
       showingTextSophieBluel = true; // Mettre à jour l'état pour indiquer que nous affichons maintenant du texte
       prevBtnSophieBluel.style.display = "none"; // Cacher le bouton précédent
@@ -211,9 +216,11 @@ const imageContainerNinaCarduccci = modal3.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images
 const imagesNinaCarduccci = [
-  "/images/Sophie/Sophie-1.png",
-  "/images/Sophie/Sophie-2.png",
-
+  "/images/Nina/Nina-1.png",
+  "/images/Nina/Nina-2.png",
+  "/images/Nina/Nina-3.png",
+  "/images/Nina/Nina-4.png",
+  "/images/Nina/Nina-5.png",
 ];
 
 // Index de l'image actuellement affichée
@@ -243,7 +250,7 @@ function showPrevImageNinaCarduccci() {
   if (currentIndexNinaCarduccci=== 0) {
     // Si nous sommes sur la première image et que le texte est masqué, afficher le texte
     if (!showingTextNinaCarduccci) {
-      modalTextNinaCarduccci.style.display = "block";
+      modalTextNinaCarduccci.style.display = "none";
       imageContainerNinaCarduccci.style.display = "none";
       showingTextNinaCarduccci = true; // Mettre à jour l'état pour indiquer que nous affichons maintenant du texte
       prevBtnNinaCarduccci.style.display = "none"; // Cacher le bouton précédent
@@ -273,9 +280,18 @@ const imageContainerKasa = modal4.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images pour le projet Kasa
 const imagesKasa = [
-  "/images/Sophie/Sophie-1.png",
-  "/images/Sophie/Sophie-2.png",
-  "/images/Sophie/Sophie-3.png"
+  "/images/Kasa/Kasa-1.png",
+  "/images/Kasa/Kasa-2.png",
+  "/images/Kasa/Kasa-3.png",
+  "/images/Kasa/Kasa-4.png",
+  "/images/Kasa/Kasa-5.png",
+  "/images/Kasa/Kasa-6.png",
+  "/images/Kasa/Kasa-7.png",
+  "/images/Kasa/Kasa-m-1.png",
+  "/images/Kasa/Kasa-m-2.png",
+  "/images/Kasa/Kasa-m-3.png",
+  "/images/Kasa/Kasa-m-4.png",
+  "/images/Kasa/Kasa-m-5.png",
 ];
 
 // Index de l'image actuellement affichée pour le projet Kasa
@@ -331,9 +347,19 @@ const imageContainerGrimoire= modal5.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images pour le projet Kasa
 const imagesGrimoire = [
-  "/images/Sophie/Sophie-1.png",
-  "/images/Sophie/Sophie-2.png",
-  "/images/Sophie/Sophie-3.png"
+  "/images/Grimoire/Grimoire-1.png",
+  "/images/Grimoire/Grimoire-2.png",
+  "/images/Grimoire/Grimoire-3.png",
+  "/images/Grimoire/Grimoire-4.png",
+  "/images/Grimoire/Grimoire-5.png",
+  "/images/Grimoire/Grimoire-6.png",
+  "/images/Grimoire/Grimoire-7.png",
+  "/images/Grimoire/Grimoire-8.png",
+  "/images/Grimoire/Grimoire-9.png",
+  "/images/Grimoire/Grimoire-10.png",
+  "/images/Grimoire/Grimoire-11.png",
+  "/images/Grimoire/Grimoire-12.png",
+  "/images/Grimoire/Grimoire-13.png"
 ];
 
 // Index de l'image actuellement affichée pour le projet Kasa

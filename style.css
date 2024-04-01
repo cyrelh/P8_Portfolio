@@ -333,7 +333,6 @@ cursor: pointer;
 
 img {
   width: 100%;
-  height: 220px;
   max-width: 300px;
   margin-top: 20px;
   border-radius: 5px;
@@ -511,6 +510,8 @@ footer {
 
 /*MODALE*/
 
+
+
 .modal {
   display: none;
   position: fixed;
@@ -527,6 +528,7 @@ footer {
 
 /* Style pour le bouton "Voir plus" */
 .open-modal {
+  height: auto;
   display: inline-block;
   background-color: #878E99; /* Couleur de fond du bouton */
   color: #fff; /* Couleur du texte */
@@ -541,6 +543,10 @@ footer {
   background-color: #0056b3; /* Changement de couleur au survol */
 }
 
+.image-container{
+  margin-top: 60%;
+}
+
 .project-modal {
   position: fixed;
   top: 50%;
@@ -549,17 +555,19 @@ footer {
   background-color: rgba(0, 0, 0, 0.9);
   padding: 20px;
   border-radius: 10px;
-  width: 1220px;
-  /* max-width: 80%;
-  max-height: 80%; */
   overflow: auto;
   z-index: 9999;
   transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
+  width: auto; /* Ajustez la largeur automatiquement en fonction de la taille de l'image */
+  max-width: 90%; /* Limitez la largeur maximale pour éviter le débordement */
+  height: auto; /* Ajustez la hauteur automatiquement en fonction de la taille de l'image */
+  max-height: 90%; /* Limitez la hauteur maximale pour éviter le débordement */
 
 }
 
 /* Style pour le contenu de la fenêtre modale */
 .project-modal-content {
+  height: auto;
   position: relative;
   color: #fff;
 }
@@ -609,10 +617,19 @@ footer {
   background-color: #ddd;
 }
 
-/* Style pour les images dans la fenêtre modale */
 .modal-image {
-  max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas la largeur de la fenêtre modale */
+  margin-top: 15%;
+  max-width: fit-content; /* Pour s'assurer que l'image ne dépasse pas la largeur de la fenêtre modale */
+  max-height: 100%; /* Pour s'assurer que l'image ne dépasse pas la hauteur de la fenêtre modale */
+  top: 50%; /* Position de 50% vers le haut */
+  left: 50%; /* Position de 50% vers la gauche */
+  top: 50%; /* Position de 50% vers le haut */
+  left: 50%; /* Position de 50% vers la gauche */
+  transform: translate(-50%, -50%); /* Translation pour centrer l'image */
+  /* Supprimez la propriété "position: absolute;" pour permettre à l'image de s'ajuster correctement dans la fenêtre modale */
+  position: relative;
 }
+
 
 .modal-content {
   background-color: #fefefe;
@@ -660,8 +677,6 @@ nav{
     padding: 20px;
     border-radius: 10px;
     width: 620px;
-    /* max-width: 80%;
-    max-height: 80%; */
     overflow: auto;
     z-index: 9999;
     transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
