@@ -76,7 +76,6 @@ modalTriggers.forEach(function(trigger) {
 
 
 
-
 /*PARTIE MODALE*/
 // Sélectionnez la fenêtre modale et les boutons de contrôle
 const modal1 = document.getElementById("project-modal-1");
@@ -338,14 +337,15 @@ nextBtnKasa.addEventListener("click", showNextImageKasa);
 prevBtnKasa.addEventListener("click", showPrevImageKasa);
 
 
-// Sélectionnez la fenêtre modale et les boutons de contrôle pour le projet Kasa
-const modal5 = document.getElementById("project-modal-5");
-const modalTextGrimoire = modal5.querySelector("#modal-text"); // Correction du sélecteur
-const prevBtnGrimoire = modal5.querySelector(".modal-btn-prev");
-const nextBtnGrimoire= modal5.querySelector(".modal-btn-next");
-const imageContainerGrimoire= modal5.querySelector(".image-container");
 
-// Tableau des chemins d'accès des images pour le projet Kasa
+
+// Sélectionnez la fenêtre modale 5 et les boutons de contrôle
+const modal5 = document.getElementById("project-modal-5");
+const modalImage5 = modal5.querySelector(".modal-image");
+const prevBt5 = modal5.querySelector(".modal-btn-prev");
+const nextBtn5 = modal5.querySelector(".modal-btn-next");
+
+// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
 const imagesGrimoire = [
   "/images/Grimoire/Grimoire-1.png",
   "/images/Grimoire/Grimoire-2.png",
@@ -362,48 +362,21 @@ const imagesGrimoire = [
   "/images/Grimoire/Grimoire-13.png"
 ];
 
-// Index de l'image actuellement affichée pour le projet Kasa
+// Index de l'image actuellement affichée
 let currentIndexGrimoire = 0;
-let showingTextGrimoire = true;
 
-// Fonction pour afficher l'image suivante pour le projet Kasa
+// Fonction pour afficher l'image suivante du projet "Sophie Bluel - Archiwebos"
 function showNextImageGrimoire() {
-  if (showingTextGrimoire) {
-    modalTextGrimoire.style.display = "none";
-    imageContainerGrimoire.style.display = "block";
-    currentIndexGrimoire++;
-    showImageGrimoire();
-    showingTextGrimoire= false;
-    prevBtnGrimoire.style.display = "inline-block";
-  } else {
-    currentIndexGrimoire = (currentIndexGrimoire + 1) % imagesGrimoire.length;
-    showImageGrimoire();
-  }
+	currentIndexGrimoire = (currentIndexGrimoire + 1) % imagesGrimoire.length;
+  modalImage5.src = imagesGrimoire[currentIndexGrimoire];
 }
 
-// Fonction pour afficher l'image précédente pour le projet Kasa
+// Fonction pour afficher l'image précédente du projet "Sophie Bluel - Archiwebos"
 function showPrevImageGrimoire() {
-  if (currentIndexGrimoire === 0) {
-    if (!showingTextGrimoire) {
-      modalTextGrimoire.style.display = "block";
-      imageContainerGrimoire.style.display = "none";
-      showingTextGrimoire = true;
-      prevBtnGrimoire.style.display = "none";
-    }
-  } else {
-    currentIndexGrimoire = (currentIndexGrimoire - 1 + imagesGrimoire.length) % imagesGrimoire.length;
-    showImageGrimoire();
-  }
+	currentIndexGrimoire = (currentIndexGrimoire - 1 + imagesGrimoire.length) % imagesGrimoire.length;
+	modalImage5.src = imagesGrimoire[currentIndexGrimoire];
 }
 
-// Fonction pour afficher l'image correspondante pour le projet Kasa
-function showImageGrimoire() {
-  imageContainerGrimoire.innerHTML = `<img src="${imagesGrimoire[currentIndexGrimoire]}" alt="Image du projet Kasa" class="modal-image">`;
-}
-
-// Écouteurs d'événements pour les boutons "Next" et "Back" pour le projet Kasa
-nextBtnGrimoire.addEventListener("click", showNextImageGrimoire);
-prevBtnGrimoire.addEventListener("click", showPrevImageGrimoire);
-
-
-
+// Écouteurs d'événements pour les boutons "Next" et "Back" du projet "Sophie Bluel - Archiwebos"
+nextBtn5.addEventListener("click", showNextImageGrimoire);
+prevBtn5.addEventListener("click", showPrevImageGrimoire);
