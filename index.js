@@ -88,12 +88,7 @@ const imageContainer = modal1.querySelector(".image-container");
 const images = [
   "/images/Booki/Booki-1.png",
   "/images/Booki/Booki-2.png",
-  "/images/Booki/Booki-3.png",
-  "/images/Booki/Booki-m-1.png",
-  "/images/Booki/Booki-m-2.png",
-  "/images/Booki/Booki-m-3.png",
-  "/images/Booki/Booki-m-4.png",
-  "/images/Booki/Booki-m-5.png"
+  "/images/Booki/Booki-3.png"
 ];
 
 // Index de l'image actuellement affichée
@@ -342,7 +337,7 @@ prevBtnKasa.addEventListener("click", showPrevImageKasa);
 // Sélectionnez la fenêtre modale 5 et les boutons de contrôle
 const modal5 = document.getElementById("project-modal-5");
 const modalImage5 = modal5.querySelector(".modal-image");
-const prevBt5 = modal5.querySelector(".modal-btn-prev");
+const prevBtn5 = modal5.querySelector(".modal-btn-prev");
 const nextBtn5 = modal5.querySelector(".modal-btn-next");
 
 // Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
