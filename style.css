@@ -312,8 +312,8 @@ cursor: pointer;
 }
 
 .project {
-  padding: 2rem;
-  margin: 0 auto;
+  padding: 3rem;
+  margin: 16px auto;
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
@@ -341,7 +341,7 @@ img {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 3px 4px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-#img-pic{
+#img-logo-booki{
   width: auto;
   height: 10%;
   max-width: 100%;
@@ -352,11 +352,26 @@ img {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 3px 4px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
+#img-logo-sophie{
+margin-bottom: 10%;
+}
+
+#img-logo-nina{
+  margin-bottom: 10%;
+  }
+
+  #img-logo-kasa{
+    margin-bottom: 10%;
+    }
+
+#img-logo-grimoire{
+      margin-bottom: 45%;
+      }
 .project_stack {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1.2em 0;
+  margin: 1rem 0;
   
 }
 
@@ -534,6 +549,7 @@ footer {
   color: #fff; /* Couleur du texte */
   padding: 10px 20px; /* Rembourrage intérieur du bouton */
   margin-left: 2%;
+  margin-bottom: 7%;
   border-radius: 5px; /* Bord arrondi */
   text-decoration: none; /* Suppression du soulignement du texte */
   transition: background-color 0.3s ease; /* Animation de transition */
@@ -544,7 +560,8 @@ footer {
 }
 
 .image-container{
-  margin-top: 60%;
+  margin-top: 20%;
+  width: 100%;
 }
 
 .project-modal {
