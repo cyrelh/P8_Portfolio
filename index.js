@@ -88,7 +88,8 @@ const imageContainer = modal1.querySelector(".image-container");
 const images = [
   "/images/Booki/Booki-1.png",
   "/images/Booki/Booki-2.png",
-  "/images/Booki/Booki-3.png"
+  "/images/Booki/Booki-3.png",
+  "/images/Booki/Booki-m-1.png"
 ];
 
 // Index de l'image actuellement affichée
@@ -150,7 +151,14 @@ const imageContainerSophieBluel = modal2.querySelector(".image-container");
 const imagesSophieBluel = [
   "/images/Sophie/Sophie-1.png",
   "/images/Sophie/Sophie-2.png",
-  "/images/Sophie/Sophie-3.png"
+  "/images/Sophie/Sophie-3.png",
+  "/images/Sophie/Sophie-4.png",
+  "/images/Sophie/Sophie-5.png",
+  "/images/Sophie/Sophie-6.png",
+  "/images/Sophie/Sophie-7.png",
+  "/images/Sophie/Sophie-8.png",
+  "/images/Sophie/Sophie-9.png",
+  "/images/Sophie/Sophie-10.png"
 ];
 
 // Index de l'image actuellement affichée

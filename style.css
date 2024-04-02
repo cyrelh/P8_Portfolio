@@ -362,11 +362,11 @@ margin-bottom: 10%;
   }
 
   #img-logo-kasa{
-    margin-bottom: 10%;
+    margin-bottom: 20%;
     }
 
 #img-logo-grimoire{
-      margin-bottom: 45%;
+      margin-bottom: 70%;
       }
 .project_stack {
   display: flex;
@@ -673,15 +673,12 @@ footer {
 }
 
 .modal-image {
-  margin-top: 15%;
+  margin-top: 23%;
   max-width: fit-content; /* Pour s'assurer que l'image ne dépasse pas la largeur de la fenêtre modale */
   max-height: 100%; /* Pour s'assurer que l'image ne dépasse pas la hauteur de la fenêtre modale */
   top: 50%; /* Position de 50% vers le haut */
   left: 50%; /* Position de 50% vers la gauche */
-  top: 50%; /* Position de 50% vers le haut */
-  left: 50%; /* Position de 50% vers la gauche */
   transform: translate(-50%, -50%); /* Translation pour centrer l'image */
-  /* Supprimez la propriété "position: absolute;" pour permettre à l'image de s'ajuster correctement dans la fenêtre modale */
   position: relative;
 }
 
