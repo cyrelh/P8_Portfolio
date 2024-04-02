@@ -454,6 +454,43 @@ margin-bottom: 10%;
   cursor: pointer;
   }
 
+/* Style pour le tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style pour les cellules du tableau */
+th, td {
+  border: 1px solid #888;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style pour l'en-tête du tableau */
+th {
+  background-color: var(--clr-bg);
+}
+
+/* Style pour les lignes paires du tableau */
+tr:nth-child(even) {
+  background-color: var(--clr-bg);
+}
+
+/* Style pour les liens dans le tableau */
+td a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Style pour les liens visités dans le tableau */
+td a:visited {
+  color: #4a90e2;
+}
+
+
+
+
   /* Contact */
 
  .home_contact {
@@ -815,6 +852,25 @@ nav{
   }
   footer {
     padding: 10px;
+  }
+  th, td {
+    padding: 8px 4px; /* Réduire le rembourrage des cellules */
+    font-size: 0.8rem; /* Réduire la taille de la police */
+  }
+
+  /* Style pour l'en-tête du tableau sur les appareils mobiles */
+  th {
+    font-size: 0.9rem; /* Réduire la taille de la police */
+  }
+
+  /* Style pour les liens dans le tableau sur les appareils mobiles */
+  td a {
+    font-size: 0.8rem; /* Réduire la taille de la police */
+  }
+
+  /* Style pour les lignes paires du tableau sur les appareils mobiles */
+  tr:nth-child(even) {
+    background-color: transparent; /* Retirer la couleur de fond des lignes paires */
   }
 }
 
