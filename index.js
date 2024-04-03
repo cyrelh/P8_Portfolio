@@ -1,3 +1,6 @@
+//Cette section gère la sélection et le changement du thème de l'interface utilisateur
+//Elle utilise le stockage local pour sauvegarder le thème choisi par l'utilisateur
+
 // Sélection de l'élément body du document HTML
 const body = document.body;
 
@@ -42,6 +45,11 @@ const toggleTheme = () =>
 btnTheme.addEventListener('click', toggleTheme);
 
 
+
+
+//Cette section gère l'affichage des modales lorsque l'utilisateur clique sur un élément déclencheur
+// Elle recherche tous les éléments avec la classe .open-modal
+//puis ajoute des gestionnaires d'événements pour afficher et masquer les modales en fonction des actions de l'utilisateur
 
 
 // Récupérer tous les éléments qui ouvrent les modales
@@ -265,7 +273,7 @@ function showPrevImageNinaCarduccci() {
 
 // Fonction pour afficher l'image correspondante
 function showImageNinaCarduccci() {
-  imageContainerNinaCarduccci.innerHTML = `<img src="${imagesNinaCarduccci[currentIndexNinaCarduccci]}" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image">`;
+  imageContainerNinaCarduccci.innerHTML = `<img src="${imagesNinaCarduccci[currentIndexNinaCarduccci]}" alt="Image du projet Nina Carduccci" class="modal-image">`;
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back"
@@ -402,7 +410,7 @@ function showPrevImageGrimoire() {
 
 // Fonction pour afficher l'image correspondante pour le projet Kasa
 function showImageGrimoire() {
-  imageContainerGrimoire.innerHTML = `<img src="${imagesGrimoire[currentIndexGrimoire]}" alt="Image du projet Kasa" class="modal-image">`;
+  imageContainerGrimoire.innerHTML = `<img src="${imagesGrimoire[currentIndexGrimoire]}" alt="Image du projet Mon Vieux Grimoire" class="modal-image">`;
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back" pour le projet Kasa
