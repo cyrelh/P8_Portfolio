@@ -140,7 +140,7 @@ function showPrevImage() {
 
 // Fonction pour afficher l'image correspondante
 function showImage() {
-  imageContainer.innerHTML = `<img src="${images[currentIndex]}" alt="Image du projet Booki" class="modal-image">`;
+  imageContainer.innerHTML = `<img src="${images[currentIndex]}" alt="Image du projet Booki" class="modal-image-booki">`;
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back"
@@ -209,7 +209,7 @@ function showPrevImageSophieBluel() {
 
 // Fonction pour afficher l'image correspondante
 function showImageSophieBluel() {
-  imageContainerSophieBluel.innerHTML = `<img src="${imagesSophieBluel[currentIndexSophieBluel]}" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image">`;
+  imageContainerSophieBluel.innerHTML = `<img src="${imagesSophieBluel[currentIndexSophieBluel]}" alt="Image du projet Sophie Bluel - Archiwebos" class="modal-image-sophie">`;
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back"
@@ -273,7 +273,7 @@ function showPrevImageNinaCarduccci() {
 
 // Fonction pour afficher l'image correspondante
 function showImageNinaCarduccci() {
-  imageContainerNinaCarduccci.innerHTML = `<img src="${imagesNinaCarduccci[currentIndexNinaCarduccci]}" alt="Image du projet Nina Carduccci" class="modal-image">`;
+  imageContainerNinaCarduccci.innerHTML = `<img src="${imagesNinaCarduccci[currentIndexNinaCarduccci]}" alt="Image du projet Nina Carduccci" class="modal-image-nina">`;
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back"
@@ -297,11 +297,8 @@ const imagesKasa = [
   "/images/Kasa/Kasa-5.png",
   "/images/Kasa/Kasa-6.png",
   "/images/Kasa/Kasa-7.png",
-  "/images/Kasa/Kasa-m-1.png",
-  "/images/Kasa/Kasa-m-2.png",
-  "/images/Kasa/Kasa-m-3.png",
-  "/images/Kasa/Kasa-m-4.png",
-  "/images/Kasa/Kasa-m-5.png",
+  "/images/Kasa/Kasa-mobile-1.png",
+  "/images/Kasa/Kasa-mobile-2.png"
 ];
 
 // Index de l'image actuellement affichée pour le projet Kasa
@@ -340,7 +337,7 @@ function showPrevImageKasa() {
 
 // Fonction pour afficher l'image correspondante pour le projet Kasa
 function showImageKasa() {
-  imageContainerKasa.innerHTML = `<img src="${imagesKasa[currentIndexKasa]}" alt="Image du projet Kasa" class="modal-image">`;
+  imageContainerKasa.innerHTML = `<img src="${imagesKasa[currentIndexKasa]}" alt="Image du projet Kasa" class="modal-image-kasa">`;
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back" pour le projet Kasa
@@ -365,7 +362,6 @@ const imagesGrimoire = [
   "/images/Grimoire/Grimoire-4.png",
   "/images/Grimoire/Grimoire-5.png",
   "/images/Grimoire/Grimoire-6.png",
-  "/images/Grimoire/Grimoire-7.png",
   "/images/Grimoire/Grimoire-8.png",
   "/images/Grimoire/Grimoire-9.png",
   "/images/Grimoire/Grimoire-10.png",
@@ -410,7 +406,7 @@ function showPrevImageGrimoire() {
 
 // Fonction pour afficher l'image correspondante pour le projet Kasa
 function showImageGrimoire() {
-  imageContainerGrimoire.innerHTML = `<img src="${imagesGrimoire[currentIndexGrimoire]}" alt="Image du projet Mon Vieux Grimoire" class="modal-image">`;
+  imageContainerGrimoire.innerHTML = `<img src="${imagesGrimoire[currentIndexGrimoire]}" alt="Image du projet Mon Vieux Grimoire" class="modal-image-grimoire">`;
 }
 
 // Écouteurs d'événements pour les boutons "Next" et "Back" pour le projet Kasa
