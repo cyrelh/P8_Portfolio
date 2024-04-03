@@ -30,9 +30,9 @@ html{
 
 body {
     font-family: 'Questrial', sans-serif;
-    background-color: #bbbdd3; /* Gris moyen à foncé */
-    margin: 0; /* Pour supprimer les marges par défaut */
-    padding: 0; /* Pour supprimer les espaces de remplissage par défaut */
+    background-color: #bbbdd3;
+    margin: 0;
+    padding: 0;
     color: var(--clr-fg);
     background-color: var(--clr-bg);
     scroll-behavior: smooth;
@@ -171,7 +171,6 @@ cursor: pointer;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: #6d878d; */
   border-radius: 1.5rem;
   padding: 2rem 5rem;
   gap: 2rem;
@@ -207,8 +206,8 @@ cursor: pointer;
 .intro_bis {
   margin-top: 1rem;
   max-width: 100rem;
-  font-size: 1rem; /* Taille de la police */
-  line-height: 1rem; /* Hauteur de ligne */
+  font-size: 1rem;
+  line-height: 1rem;
   color: #000;
   background-color: #888;
 }
@@ -223,13 +222,13 @@ cursor: pointer;
   padding: 1rem 1.5rem;
   border-radius: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  color: #fff; /* Couleur du texte */
+  color: #fff;
   text-decoration: none;
-  font-size: 1.6rem; /* Taille de la police */
-  transition: background-color 0.3s ease; /* Animation de transition */
+  font-size: 1.6rem;
+  transition: background-color 0.3s ease;
 }
 .intro_btn:hover {
-  background-color: #c79b77; /* Changement de couleur au survol */
+  background-color: #c79b77;
 }
 
 .home_about{
@@ -276,9 +275,9 @@ cursor: pointer;
   padding: 0.5rem;
     margin-top: 1.5rem;
     max-width: 60rem;
-    font-size: 1.4rem; /* Taille de la police */
-    line-height: 2rem; /* Hauteur de ligne */
-    color: var(--clr-bg-alt); /* Couleur du texte */
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--clr-bg-alt);
 }
 .about_cv {
   display: inline-block;
@@ -389,11 +388,11 @@ margin-bottom: 10%;
 }
 
 .section_title {
-  font-family: 'Questrial', sans-serif; /* Utilisation de la même police que celle utilisée pour le titre "À propos" */
-  font-size: 3rem; /* Taille de la police */
-  margin-top: 0; /* Marge supérieure pour espacer le titre de la section */
-  margin-bottom: 3rem; /* Marge inférieure pour espacer le titre de la section */
-  text-align: center; /* Alignement centré */
+  font-family: 'Questrial', sans-serif;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 
@@ -419,14 +418,14 @@ margin-bottom: 10%;
   padding: 0.5rem;
   margin-top: 1.5rem;
   max-width: 60rem;
-  font-size: 1.4rem; /* Taille de la police */
-  line-height: 2rem; /* Hauteur de ligne */
-  color: var(--clr-fg); /* Couleur du texte */
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--clr-fg);
 }
 
 .about .skills_list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 3%;
 }
@@ -454,36 +453,30 @@ margin-bottom: 10%;
   cursor: pointer;
   }
 
-/* Style pour le tableau */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/* Style pour les cellules du tableau */
 th, td {
   border: 1px solid #888;
   padding: 8px;
   text-align: left;
 }
 
-/* Style pour l'en-tête du tableau */
 th {
   background-color: var(--clr-bg);
 }
 
-/* Style pour les lignes paires du tableau */
 tr:nth-child(even) {
   background-color: var(--clr-bg);
 }
 
-/* Style pour les liens dans le tableau */
 td a {
   text-decoration: none;
   color: #007bff;
 }
 
-/* Style pour les liens visités dans le tableau */
 td a:visited {
   color: #4a90e2;
 }
@@ -563,8 +556,6 @@ footer {
 
 /*MODALE*/
 
-
-
 .modal {
   display: none;
   position: fixed;
@@ -577,24 +568,22 @@ footer {
   background-color: rgba(0,0,0,0.4);
 }
 
-
-
 /* Style pour le bouton "Voir plus" */
 .open-modal {
   height: auto;
   display: inline-block;
-  background-color: #878E99; /* Couleur de fond du bouton */
-  color: #fff; /* Couleur du texte */
-  padding: 10px 20px; /* Rembourrage intérieur du bouton */
+  background-color: #878E99; 
+  color: #fff;
+  padding: 10px 20px;
   margin-left: 2%;
   margin-bottom: 7%;
-  border-radius: 5px; /* Bord arrondi */
-  text-decoration: none; /* Suppression du soulignement du texte */
-  transition: background-color 0.3s ease; /* Animation de transition */
+  border-radius: 5px;
+  text-decoration: none; 
+  transition: background-color 0.3s ease;
 }
 
 .open-modal:hover {
-  background-color: #0056b3; /* Changement de couleur au survol */
+  background-color: #0056b3;
 }
 
 .image-container{
@@ -612,22 +601,19 @@ footer {
   border-radius: 10px;
   overflow: auto;
   z-index: 9999;
-  transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
-  width: auto; /* Ajustez la largeur automatiquement en fonction de la taille de l'image */
-  max-width: 90%; /* Limitez la largeur maximale pour éviter le débordement */
-  height: auto; /* Ajustez la hauteur automatiquement en fonction de la taille de l'image */
-  max-height: 90%; /* Limitez la hauteur maximale pour éviter le débordement */
-
+  transition: all 0.3s ease;
+  width: auto; 
+  max-width: 90%; 
+  height: auto; 
+  max-height: 90%; 
 }
 
-/* Style pour le contenu de la fenêtre modale */
 .project-modal-content {
   height: auto;
   position: relative;
   color: #fff;
 }
 
-/* Style pour le bouton de fermeture de la fenêtre modale */
 .close-modal {
   position: absolute;
   top: 10px;
@@ -651,7 +637,6 @@ footer {
 }
 
 
-/* Style pour les boutons "Next" et "Back" */
 .modal-controls {
   display: flex;
   justify-content: space-between;
@@ -674,11 +659,11 @@ footer {
 
 .modal-image {
   margin-top: 23%;
-  max-width: fit-content; /* Pour s'assurer que l'image ne dépasse pas la largeur de la fenêtre modale */
-  max-height: 100%; /* Pour s'assurer que l'image ne dépasse pas la hauteur de la fenêtre modale */
-  top: 50%; /* Position de 50% vers le haut */
-  left: 50%; /* Position de 50% vers la gauche */
-  transform: translate(-50%, -50%); /* Translation pour centrer l'image */
+  max-width: fit-content; 
+  max-height: 100%; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: relative;
 }
 
@@ -731,7 +716,7 @@ nav{
     width: 620px;
     overflow: auto;
     z-index: 9999;
-    transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
+    transition: all 0.3s ease;
   }
 
   .modal-content {
@@ -755,7 +740,7 @@ nav{
     width: 420px;
     overflow: hidden;
     z-index: 9999;
-    transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
+    transition: all 0.3s ease;
   
   }
 
@@ -765,22 +750,20 @@ nav{
   
   .project img {
     width: 40%;
-    max-width: 100%; /* Utilisation de la largeur maximale pour l'image */
+    max-width: 100%;
     height: auto;
     margin-top: 10px;
   }
 
   .projects_grid {
-    grid-template-columns: repeat(1, 1fr); /* Une colonne pour les appareils mobiles */
-    grid-gap: 1rem; /* Réduction de l'espace entre les projets */
-    width: calc(100% - 2rem); /* Largeur ajustée pour s'adapter à l'écran */
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    width: calc(100% - 2rem);
   }
   .project {
-    padding: 1rem; /* Réduction du padding pour éviter le débordement */
+    padding: 1rem;
   }
-  /* .header_wrapper {
-    margin: 1rem 2rem;
-  } */
+ 
 
   .header_wrapper {
     margin: 1rem;
@@ -798,13 +781,10 @@ nav{
   .intro {
     padding: 2rem;
   }
-  /* .intro_avatar {
-    width: 50%;
-  } */
   
   .intro_avatar {
     width: 70%;
-    max-width: 200px; /* Ajout d'une largeur maximale pour l'avatar */
+    max-width: 200px;
   }
   
   .about_intro_title {
@@ -822,9 +802,6 @@ nav{
   .section_title {
     font-size: 2.5rem;
   }
-  /* .project {
-    padding: 1.5em;
-  } */
   .project_description {
     font-size: 1.2rem;
   }
@@ -851,23 +828,20 @@ nav{
     padding: 10px;
   }
   th, td {
-    padding: 8px 4px; /* Réduire le rembourrage des cellules */
-    font-size: 0.8rem; /* Réduire la taille de la police */
+    padding: 8px 4px;
+    font-size: 0.8rem;
   }
 
-  /* Style pour l'en-tête du tableau sur les appareils mobiles */
   th {
-    font-size: 0.9rem; /* Réduire la taille de la police */
+    font-size: 0.9rem;
   }
 
-  /* Style pour les liens dans le tableau sur les appareils mobiles */
   td a {
-    font-size: 0.8rem; /* Réduire la taille de la police */
+    font-size: 0.8rem;
   }
 
-  /* Style pour les lignes paires du tableau sur les appareils mobiles */
   tr:nth-child(even) {
-    background-color: transparent; /* Retirer la couleur de fond des lignes paires */
+    background-color: transparent;
   }
 }
 
@@ -883,12 +857,9 @@ nav{
     padding: 20px;
     border-radius: 10px;
     width: 350px;
-    /* max-width: 80%;
-    max-height: 80%; */
     overflow: auto;
     z-index: 9999;
-    transition: all 0.3s ease; /* Ajout de transition pour un effet d'agrandissement en douceur */
-  
+    transition: all 0.3s ease;
   }
   .header_wrapper .nav_menu {
     gap: 0.5rem;
