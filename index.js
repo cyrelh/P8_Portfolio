@@ -94,10 +94,10 @@ const imageContainer = modal1.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images
 const images = [
-  "./images/Booki/Booki-1.png",
-  "./images/Booki/Booki-2.png",
-  "./images/Booki/Booki-3.png",
-  "./images/Booki/Booki-m-1.png"
+  "./images/Booki/Booki-1.webp",
+  "./images/Booki/Booki-2.webp",
+  "./images/Booki/Booki-3.webp",
+  "./images/Booki/Booki-m-1.webp"
 ];
 
 // Index de l'image actuellement affichée
@@ -157,16 +157,16 @@ const imageContainerSophieBluel = modal2.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images
 const imagesSophieBluel = [
-  "./images/Sophie/Sophie-1.png",
-  "./images/Sophie/Sophie-2.png",
-  "./images/Sophie/Sophie-3.png",
-  "./images/Sophie/Sophie-4.png",
-  "./images/Sophie/Sophie-5.png",
-  "./images/Sophie/Sophie-6.png",
-  "./images/Sophie/Sophie-7.png",
-  "./images/Sophie/Sophie-8.png",
-  "./images/Sophie/Sophie-9.png",
-  "./images/Sophie/Sophie-10.png"
+  "./images/Sophie/Sophie-1.webp",
+  "./images/Sophie/Sophie-2.webp",
+  "./images/Sophie/Sophie-3.webp",
+  "./images/Sophie/Sophie-4.webp",
+  "./images/Sophie/Sophie-5.webp",
+  "./images/Sophie/Sophie-6.webp",
+  "./images/Sophie/Sophie-7.webp",
+  "./images/Sophie/Sophie-8.webp",
+  "./images/Sophie/Sophie-9.webp",
+  "./images/Sophie/Sophie-10.webp"
 ];
 
 // Index de l'image actuellement affichée
@@ -226,11 +226,11 @@ const imageContainerNinaCarduccci = modal3.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images
 const imagesNinaCarduccci = [
-  "./images/Nina/Nina-1.png",
-  "./images/Nina/Nina-2.png",
-  "./images/Nina/Nina-3.png",
-  "./images/Nina/Nina-4.png",
-  "./images/Nina/Nina-5.png",
+  "./images/Nina/Nina-1.webp",
+  "./images/Nina/Nina-2.webp",
+  "./images/Nina/Nina-3.webp",
+  "./images/Nina/Nina-4.webp",
+  "./images/Nina/Nina-5.webp",
 ];
 
 // Index de l'image actuellement affichée
@@ -290,15 +290,15 @@ const imageContainerKasa = modal4.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images pour le projet Kasa
 const imagesKasa = [
-  "./images/Kasa/Kasa-1.png",
-  "./images/Kasa/Kasa-2.png",
-  "./images/Kasa/Kasa-3.png",
-  "./images/Kasa/Kasa-4.png",
-  "./images/Kasa/Kasa-5.png",
-  "./images/Kasa/Kasa-6.png",
-  "./images/Kasa/Kasa-7.png",
-  "./images/Kasa/Kasa-mobile-1.png",
-  "./images/Kasa/Kasa-mobile-2.png"
+  "./images/Kasa/Kasa-1.webp",
+  "./images/Kasa/Kasa-2.webp",
+  "./images/Kasa/Kasa-3.webp",
+  "./images/Kasa/Kasa-4.webp",
+  "./images/Kasa/Kasa-5.webp",
+  "./images/Kasa/Kasa-6.webp",
+  "./images/Kasa/Kasa-7.webp",
+  "./images/Kasa/Kasa-mobile-1.webp",
+  "./images/Kasa/Kasa-mobile-2.webp"
 ];
 
 // Index de l'image actuellement affichée pour le projet Kasa
@@ -356,18 +356,18 @@ const imageContainerGrimoire = modal5.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
 const imagesGrimoire = [
-  "./images/Grimoire/Grimoire-1.png",
-  "./images/Grimoire/Grimoire-2.png",
-  "./images/Grimoire/Grimoire-3.png",
-  "./images/Grimoire/Grimoire-4.png",
-  "./images/Grimoire/Grimoire-5.png",
-  "./images/Grimoire/Grimoire-6.png",
-  "./images/Grimoire/Grimoire-8.png",
-  "./images/Grimoire/Grimoire-9.png",
-  "./images/Grimoire/Grimoire-10.png",
-  "./images/Grimoire/Grimoire-11.png",
-  "./images/Grimoire/Grimoire-12.png",
-  "./images/Grimoire/Grimoire-13.png"
+  "./images/Grimoire/Grimoire-1.webp",
+  "./images/Grimoire/Grimoire-2.webp",
+  "./images/Grimoire/Grimoire-3.webp",
+  "./images/Grimoire/Grimoire-4.webp",
+  "./images/Grimoire/Grimoire-5.webp",
+  "./images/Grimoire/Grimoire-6.webp",
+  "./images/Grimoire/Grimoire-8.webp",
+  "./images/Grimoire/Grimoire-9.webp",
+  "./images/Grimoire/Grimoire-10.webp",
+  "./images/Grimoire/Grimoire-11.webp",
+  "./images/Grimoire/Grimoire-12.webp",
+  "./images/Grimoire/Grimoire-13.webp"
 ];
 
 // Index de l'image actuellement affichée pour le projet Kasa
