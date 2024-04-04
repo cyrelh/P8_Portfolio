@@ -42,7 +42,7 @@ body {
 .light {
   --clr-bg: #fcfcfc;
   --clr-bg-alt: #fff;
-  --clr-fg: #555;
+  --clr-fg: #333;
   --clr-fg-alt: #444;
   --clr-primary: #2978b5;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -51,7 +51,7 @@ body {
 .dark {
   --clr-bg: #23283e;
   --clr-bg-alt: #2a2f4c;
-  --clr-fg: #bdbddd;
+  --clr-fg: #fff;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
@@ -160,7 +160,7 @@ cursor: pointer;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #6d878d;
+  background-color: var(--clr-bg);
   border-radius: 1.5rem;
   padding: 2rem 5rem;
   gap: 2rem;
@@ -199,8 +199,9 @@ cursor: pointer;
 }
 .intro_title {
   font-size: 3rem;
-  color: var(--clr-fg-alt);
+  color: var(--clr-fg);
   text-align: center;
+  background-color: var(--clr-bg);
 }
 
 .intro_bis {
@@ -208,8 +209,8 @@ cursor: pointer;
   max-width: 100rem;
   font-size: 1rem;
   line-height: 1rem;
-  color: #000;
-  background-color: #888;
+  color: var(--clr-fg);
+  background-color: var(--clr-bg-alt);
 }
 
 .intro_bis strong {
@@ -277,7 +278,7 @@ cursor: pointer;
     max-width: 60rem;
     font-size: 1.4rem;
     line-height: 2rem;
-    color: var(--clr-bg-alt);
+    color: var(--clr-fg);
 }
 .about_cv {
   display: inline-block;
@@ -652,7 +653,7 @@ footer {
 }
 
 .close {
-  color: #aaa;
+  color: var(--clr-fg);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -660,7 +661,7 @@ footer {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: var(--clr-fg);
   text-decoration: none;
   cursor: pointer;
 }
@@ -742,7 +743,7 @@ footer {
 }
 
 .modal-content {
-  background-color:#888;
+  background-color: var(--clr-bg);
   margin: 6% auto;
   padding: 15px;
   border: 1px solid #888;
