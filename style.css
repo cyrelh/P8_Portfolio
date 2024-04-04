@@ -602,8 +602,8 @@ footer {
 .open-modal {
   height: auto;
   display: inline-block;
-  background-color: #878E99; 
-  color: #fff;
+  background-color: var(--clr-fg); 
+  color: var(--clr-bg);
   padding: 10px 20px;
   margin-left: 2%;
   margin-bottom: 7%;
