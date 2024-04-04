@@ -94,10 +94,10 @@ const imageContainer = modal1.querySelector(".image-container");
 
 // Tableau des chemins d'accès des images
 const images = [
-  "../images/Booki/Booki-1.png",
-  "../images/Booki/Booki-2.png",
-  "../images/Booki/Booki-3.png",
-  "../images/Booki/Booki-m-1.png"
+  "./images/Booki/Booki-1.png",
+  "./images/Booki/Booki-2.png",
+  "./images/Booki/Booki-3.png",
+  "./images/Booki/Booki-m-1.png"
 ];
 
 // Index de l'image actuellement affichée
