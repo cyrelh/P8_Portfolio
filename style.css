@@ -942,7 +942,11 @@ nav{
     font-size: 1.2rem;
   }
   .intro_avatar {
-    width: 70%;
+    width: 100%;
+  }
+
+  .intro_avatar img {
+    width:117%
   }
   .about_intro_title {
     font-size: 2rem;
