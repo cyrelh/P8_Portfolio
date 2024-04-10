@@ -347,14 +347,14 @@ prevBtnKasa.addEventListener("click", showPrevImageKasa);
 
 
 
-// Sélectionnez la fenêtre modale et les boutons de contrôle pour le projet Kasa
+// Sélectionnez la fenêtre modale et les boutons de contrôle pour le projet Grimoire
 const modal5 = document.getElementById("project-modal-5");
 const modalTextGrimoire= modal5.querySelector("#modal-text"); // Correction du sélecteur
 const prevBtnGrimoire = modal5.querySelector(".modal-btn-prev");
 const nextBtnGrimoire = modal5.querySelector(".modal-btn-next");
 const imageContainerGrimoire = modal5.querySelector(".image-container");
 
-// Tableau des chemins d'accès des images pour le projet "Sophie Bluel - Archiwebos"
+// Tableau des chemins d'accès des images pour le projet Grimoire
 const imagesGrimoire = [
   "./images/Grimoire/Grimoire-1.webp",
   "./images/Grimoire/Grimoire-2.webp",
@@ -370,11 +370,11 @@ const imagesGrimoire = [
   "./images/Grimoire/Grimoire-13.webp"
 ];
 
-// Index de l'image actuellement affichée pour le projet Kasa
+// Index de l'image actuellement affichée pour le projet Grimoire
 let currentIndexGrimoire = 0;
 let showingTextGrimoire = true;
 
-// Fonction pour afficher l'image suivante pour le projet Kasa
+// Fonction pour afficher l'image suivante pour le projet Grimoire
 function showNextImageGrimoire() {
   if (showingTextGrimoire) {
     modalTextGrimoire.style.display = "none";
@@ -389,7 +389,7 @@ function showNextImageGrimoire() {
   }
 }
 
-// Fonction pour afficher l'image précédente pour le projet Kasa
+// Fonction pour afficher l'image précédente pour le projet Grimoire
 function showPrevImageGrimoire() {
   if (currentIndexGrimoire === 0) {
     if (!showingTextGrimoire) {
@@ -404,7 +404,7 @@ function showPrevImageGrimoire() {
   }
 }
 
-// Fonction pour afficher l'image correspondante pour le projet Kasa
+// Fonction pour afficher l'image correspondante pour le projet Grimoire
 function showImageGrimoire() {
   imageContainerGrimoire.innerHTML = `<img src="${imagesGrimoire[currentIndexGrimoire]}" alt="Image du projet Mon Vieux Grimoire" class="modal-image-grimoire">`;
 }
